@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <meta property="og:type" content="{{ ogType or 'website' }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+  {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
+  {% if featured_image %}<meta property="og:image" content="{{ site.url }}{{ page.url }}{{ featured_image }}">{% endif %}
+
+  <meta name="twitter:card" content="{% if featured_image %}summary_large_image{% else %}summary{% endif %}">
+  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+  {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
+  {% if featured_image %}<meta name="twitter:image" content="{{ site.url }}{{ page.url }}{{ featured_image }}">{% endif %}
+
+  <link rel="stylesheet" href="/assets/water.css">
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+  {{ content | safe }}
+  {% include "nav.njk" %}
+</body>
+</html>

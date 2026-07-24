@@ -1,0 +1,53 @@
+/* A little polish on top of water.css — nothing structural. */
+
+/* water.css is 800px wide; a slightly narrower column reads better */
+body {
+  max-width: 44rem;
+  line-height: 1.65;
+}
+
+/* the post byline ("Andy Smith · date") is metadata — let it sit quieter */
+article > p:first-of-type {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: -0.3rem;
+}
+article > p:first-of-type a {
+  color: var(--text-muted);
+}
+
+/* home visiting card */
+.bio {
+  margin: 0.2rem 0 1rem;
+}
+
+/* year-archive post lists */
+.posts {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.posts li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.25rem 0;
+}
+.posts__date {
+  flex: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* footer nav — only on the home page */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.site-footer a { color: var(--text-muted); }
+.site-footer a:hover { color: var(--links); }

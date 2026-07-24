@@ -1,0 +1,20 @@
+---
+layout: base.njk
+pagination:
+  data: collections.postsByYear
+  size: 1
+  alias: group
+permalink: "/{{ group.year }}/"
+isYearArchive: true
+eleventyComputed:
+  title: "{{ group.year }}"
+---
+<h1>{{ group.year }}</h1>
+<ul class="posts">
+{% for post in group.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <span class="posts__date">{{ post.date | monthDay }}</span>
+  </li>
+{% endfor %}
+</ul>
