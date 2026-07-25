@@ -4,3 +4,10 @@ _site/
 
 # reference clones of the old repos — not part of this site
 old/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
