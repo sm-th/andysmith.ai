@@ -69,6 +69,7 @@ h1, h2, h3 { line-height: 1.25; }
 
 /* ---- home feed: day-grouped ---- */
 .day__label {
+  display: inline-block;   /* underline hugs the date, not the whole column */
   font-size: 0.9rem; font-weight: 600; color: var(--text-muted);
   margin: 2.6rem 0 0.2rem; padding-bottom: 0.3rem;
   border-bottom: 1px solid var(--border);
