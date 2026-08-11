@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title: Blogging in the age of AI
 description: Why I still write my own blog posts by hand even as I automate everything else around my work.
 date: 2026-08-11T09:06:56
