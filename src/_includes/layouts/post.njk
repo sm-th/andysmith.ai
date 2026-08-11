@@ -4,6 +4,6 @@ isPost: true
 ---
 <article class="post">
   <h1>{{ title }}</h1>
-  <p class="post__meta"><a href="/">{{ site.author }}</a> · <a href="{{ page.url }}">{{ page.date | readableDate }}</a></p>
+  <p class="post__meta"><a href="/">{{ site.author }}</a> · <a href="{{ page.url }}">{{ page.date | readableDate(timezone) }}</a></p>
   {{ content | safe }}
 </article>

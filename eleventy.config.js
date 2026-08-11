@@ -17,29 +17,40 @@ export default function (eleventyConfig) {
 
   const asDate = (value) => (value instanceof Date ? value : new Date(value));
 
-  // "January 14, 2026" — formatted in UTC so the calendar day never shifts
-  eleventyConfig.addFilter("readableDate", (value) =>
+  // Dates/times render in the POST's own timezone (its `timezone` frontmatter —
+  // the author's zone when written), so the day and time are the author's local
+  // values, matching the post's URL/path day. Falls back to UTC for posts with
+  // no timezone. The client-side enhancement (assets/time.js) later re-localizes
+  // the *time* into each reader's own zone on hover / as "N ago".
+  // "January 14, 2026"
+  eleventyConfig.addFilter("readableDate", (value, zone) =>
     asDate(value).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
-      timeZone: "UTC",
+      timeZone: zone || "UTC",
     })
   );
 
   // "May 25" — day within a year group on the home / archive stream
-  eleventyConfig.addFilter("monthDay", (value) =>
+  eleventyConfig.addFilter("monthDay", (value, zone) =>
     asDate(value).toLocaleDateString("en-US", {
       month: "short",
       day: "numeric",
-      timeZone: "UTC",
+      timeZone: zone || "UTC",
     })
   );
 
-  // "7:57 am" — time of day for the per-entry permalink line (UTC, lowercased)
-  eleventyConfig.addFilter("time", (value) =>
+  // "7:57 am +07" — author-local time with a zone label (the no-JS fallback)
+  eleventyConfig.addFilter("time", (value, zone) =>
     asDate(value)
-      .toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true, timeZone: "UTC" })
+      .toLocaleTimeString("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true,
+        timeZone: zone || "UTC",
+        timeZoneName: zone ? "shortOffset" : undefined,
+      })
       .toLowerCase()
   );
 
@@ -82,15 +93,26 @@ export default function (eleventyConfig) {
   // Grouped archives. Each entry carries the labels the archive templates and
   // permalinks need (numeric year/day + short month name matching the path).
   const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  // Group by the post's LOCAL day, taken from its year-first path
+  // (src/YYYY/Mon/D/slug/) — that path is the author's local day, so archives
+  // match the post URLs and never drift to a UTC day. Legacy posts without the
+  // path fall back to the date's UTC parts.
+  const dayParts = (post) => {
+    const m = (post.filePathStem || "").match(/\/(\d{4})\/([A-Za-z]{3})\/(\d{1,2})\//);
+    if (m) return { year: Number(m[1]), mon: m[2], day: Number(m[3]) };
+    const d = post.date;
+    return { year: d.getUTCFullYear(), mon: MONTHS[d.getUTCMonth()], day: d.getUTCDate() };
+  };
   const grouped = (api, keyFn, fields) => {
     const posts = api.getFilteredByGlob(POST_GLOB).sort((a, b) => b.date - a.date);
     const groups = [];
     const index = new Map();
     for (const post of posts) {
-      const key = keyFn(post.date);
+      const p = dayParts(post);
+      const key = keyFn(p);
       let group = index.get(key);
       if (!group) {
-        group = { ...fields(post.date), posts: [] };
+        group = { ...fields(p), posts: [] };
         index.set(key, group);
         groups.push(group);
       }
@@ -100,23 +122,15 @@ export default function (eleventyConfig) {
   };
 
   eleventyConfig.addCollection("postsByYear", (api) =>
-    grouped(api, (d) => d.getUTCFullYear(), (d) => ({ year: d.getUTCFullYear() }))
+    grouped(api, (p) => p.year, (p) => ({ year: p.year }))
   );
 
   eleventyConfig.addCollection("postsByMonth", (api) =>
-    grouped(
-      api,
-      (d) => `${d.getUTCFullYear()}-${d.getUTCMonth()}`,
-      (d) => ({ year: d.getUTCFullYear(), mon: MONTHS[d.getUTCMonth()] })
-    )
+    grouped(api, (p) => `${p.year}-${p.mon}`, (p) => ({ year: p.year, mon: p.mon }))
   );
 
   eleventyConfig.addCollection("postsByDay", (api) =>
-    grouped(
-      api,
-      (d) => `${d.getUTCFullYear()}-${d.getUTCMonth()}-${d.getUTCDate()}`,
-      (d) => ({ year: d.getUTCFullYear(), mon: MONTHS[d.getUTCMonth()], day: d.getUTCDate() })
-    )
+    grouped(api, (p) => `${p.year}-${p.mon}-${p.day}`, (p) => ({ year: p.year, mon: p.mon, day: p.day }))
   );
 
   return {
