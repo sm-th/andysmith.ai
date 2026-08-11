@@ -1,5 +1,6 @@
 ---
 title: Speech to text
+type: post
 description: My take on local speech-to-text tools, and why I settled on Handy.
 date: 2026-08-11T09:49:31
 ---
