@@ -36,6 +36,13 @@ export default function (eleventyConfig) {
     })
   );
 
+  // "7:57 am" — time of day for the per-entry permalink line (UTC, lowercased)
+  eleventyConfig.addFilter("time", (value) =>
+    asDate(value)
+      .toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true, timeZone: "UTC" })
+      .toLowerCase()
+  );
+
   // Date parts for legacy-URL redirect generation
   eleventyConfig.addFilter("dateYear", (value) => asDate(value).getUTCFullYear());
   eleventyConfig.addFilter("dateMonthNum", (value) =>

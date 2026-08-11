@@ -14,7 +14,7 @@
       <h2 class="stream__title"><a href="{{ post.data.link }}" rel="noopener nofollow">{{ post.data.title }} &#8599;</a></h2>
       {%- if showDate %}<a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>{% endif -%}
     </div>
-    {%- if not compact %}<div class="stream__note">{{ post.templateContent | safe }}</div><div class="stream__foot"><a href="{{ post.url }}">Permalink</a></div>{% endif -%}
+    {%- if not compact %}<div class="stream__note">{{ post.templateContent | safe }}</div><div class="stream__foot"><a class="stream__ts" href="{{ post.url }}">{{ post.date | time }}</a> <a class="stream__hash" href="{{ post.url }}" aria-label="Permalink">#</a></div>{% endif -%}
   </li>
 {%- elif t == "quote" -%}
   <li class="stream__item stream__item--quote">
@@ -25,10 +25,7 @@
     </div>
     {%- else -%}
     <blockquote class="stream__quote">{{ post.templateContent | safe }}</blockquote>
-    <div class="stream__head">
-      <span class="stream__cite">&#8212; {{ post.data.attribution }}</span>
-      <a class="stream__date" href="{{ post.url }}">Permalink</a>
-    </div>
+    <div class="stream__foot">&#8212; {{ post.data.attribution }} &#183; <a class="stream__ts" href="{{ post.url }}">{{ post.date | time }}</a> <a class="stream__hash" href="{{ post.url }}" aria-label="Permalink">#</a></div>
     {%- endif -%}
   </li>
 {%- else -%}
@@ -37,7 +34,7 @@
       <h2 class="stream__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
       {%- if showDate %}<a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>{% endif -%}
     </div>
-    {%- if not compact %}<div class="stream__note">{{ post.templateContent | safe }}</div><div class="stream__foot"><a href="{{ post.url }}">Permalink</a></div>{% endif -%}
+    {%- if not compact %}<div class="stream__note">{{ post.templateContent | safe }}</div><div class="stream__foot"><a class="stream__ts" href="{{ post.url }}">{{ post.date | time }}</a> <a class="stream__hash" href="{{ post.url }}" aria-label="Permalink">#</a></div>{% endif -%}
   </li>
 {%- endif -%}
 {% endmacro %}
