@@ -36,15 +36,22 @@ export default function (eleventyConfig) {
     });
   });
 
+  // Post locations: legacy posts under src/blog/**, new posts under a
+  // year-first path (src/2026/Aug/11/<slug>/) for short, day-level URLs.
+  const POST_GLOBS = [
+    "src/blog/**/index.md",
+    "src/[0-9][0-9][0-9][0-9]/**/index.md",
+  ];
+
   // Newest first
   eleventyConfig.addCollection("posts", (api) =>
-    api.getFilteredByGlob("src/blog/**/index.md").sort((a, b) => b.date - a.date)
+    api.getFilteredByGlob(POST_GLOBS).sort((a, b) => b.date - a.date)
   );
 
   // Same posts, grouped into [{ year, posts }] in descending year order
   eleventyConfig.addCollection("postsByYear", (api) => {
     const posts = api
-      .getFilteredByGlob("src/blog/**/index.md")
+      .getFilteredByGlob(POST_GLOBS)
       .sort((a, b) => b.date - a.date);
     const groups = [];
     for (const post of posts) {
