@@ -133,6 +133,26 @@ export default function (eleventyConfig) {
     grouped(api, (p) => `${p.year}-${p.mon}-${p.day}`, (p) => ({ year: p.year, mon: p.mon, day: p.day }))
   );
 
+  // One entry per distinct tag: { tag, count, posts (newest first) }. Drives the
+  // /tags/ index, the per-tag pages, and the sidebar Topics block. Tags are
+  // already normalized (lowercase kebab-case) in post frontmatter, so the raw
+  // value doubles as the URL slug. Sorted by frequency, then alphabetically.
+  eleventyConfig.addCollection("tagList", (api) => {
+    const byTag = new Map();
+    api
+      .getFilteredByGlob(POST_GLOB)
+      .sort((a, b) => b.date - a.date)
+      .forEach((post) => {
+        for (const tag of post.data.tags || []) {
+          if (!byTag.has(tag)) byTag.set(tag, []);
+          byTag.get(tag).push(post);
+        }
+      });
+    return [...byTag.entries()]
+      .map(([tag, posts]) => ({ tag, count: posts.length, posts }))
+      .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
+  });
+
   return {
     dir: { input: "src", includes: "_includes", output: "_site" },
     // Don't run post markdown through the template engine — content is untrusted

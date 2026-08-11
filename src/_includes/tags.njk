@@ -1,0 +1,9 @@
+{#
+  Post-footer tag line. Plain muted links (no chips/borders) — used at the
+  bottom of single post/link/quote pages. Renders nothing when there are no tags.
+#}
+{% macro list(tags) %}
+{%- if tags and tags.length -%}
+<p class="post__tags">Tagged {% for t in tags %}<a href="/tags/{{ t }}/">{{ t }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{%- endif -%}
+{% endmacro %}

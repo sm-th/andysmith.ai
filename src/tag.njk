@@ -1,0 +1,16 @@
+---
+layout: base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: entry
+permalink: "/tags/{{ entry.tag }}/"
+eleventyComputed:
+  title: "Tagged “{{ entry.tag }}”"
+---
+{% import "stream.njk" as stream %}
+<nav class="crumbs"><a href="/">home</a> · <a href="/tags/">tags</a></nav>
+<h1 class="tag-title">{{ entry.tag }} <span class="tag-count">{{ entry.count }} post{% if entry.count != 1 %}s{% endif %}</span></h1>
+<ul class="stream">
+  {%- for post in entry.posts %}{{ stream.item(post, true) }}{% endfor -%}
+</ul>

@@ -124,6 +124,32 @@ h1, h2, h3 { line-height: 1.25; }
 .crumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; }
 .crumbs a { color: var(--text-muted); }
 
+/* ---- tags: plain muted links everywhere, no chips/borders/backgrounds ---- */
+/* single-post footer — prose "Tagged a · b · c", set off by whitespace + a rule */
+.post__tags {
+  margin: 2rem 0 0; padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted); font-size: 0.85rem;
+}
+.post__tags a { color: var(--text-muted); text-decoration: none; }
+.post__tags a:hover { color: var(--links); text-decoration: underline; }
+
+/* feed entry — hashtag-style, trailing the permalink foot (inherits foot color) */
+.stream__tags a { margin-left: 0.4rem; }
+.stream__tags a::before { content: "#"; opacity: 0.55; }
+
+/* sidebar Topics */
+.side-tags__count { color: var(--text-muted); font-size: 0.78rem; }
+.side-tags__all { margin: 0.5rem 0 0; line-height: 1.35; }
+.side-tags__all a { color: var(--text-muted); text-decoration: none; }
+.side-tags__all a:hover { color: var(--links); }
+
+/* /tags/ index + per-tag pages */
+.tag-cloud { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.45rem 1.2rem; }
+.tag-cloud a { text-decoration: none; }
+.tag-count { color: var(--text-muted); font-weight: 400; font-size: 0.82rem; }
+.tag-title { display: flex; align-items: baseline; gap: 0.6rem; }
+
 /* ---- footer ---- */
 .site-footer {
   margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--border);

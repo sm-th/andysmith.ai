@@ -27,6 +27,13 @@
   </div>
   {%- endif -%}
   <nav class="side-block">
+    <h2>Topics</h2>
+    <ul class="side-tags">
+    {%- for entry in collections.tagList | limit(12) %}<li><a href="/tags/{{ entry.tag }}/">{{ entry.tag }}</a> <span class="side-tags__count">{{ entry.count }}</span></li>{% endfor -%}
+    </ul>
+    <p class="side-tags__all"><a href="/tags/">All topics →</a></p>
+  </nav>
+  <nav class="side-block">
     <h2>Archive</h2>
     <ul>
     {%- for g in collections.postsByYear %}<li><a href="/{{ g.year }}/">{{ g.year }}</a></li>{% endfor -%}

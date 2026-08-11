@@ -6,4 +6,5 @@ isPost: true
   <h1>{{ title }}</h1>
   <p class="post__meta"><a href="/">{{ site.author }}</a> · <a href="{{ page.url }}">{{ page.date | readableDate(timezone) }}</a></p>
   {{ content | safe }}
+  {% import "tags.njk" as taglist %}{{ taglist.list(tags) }}
 </article>
