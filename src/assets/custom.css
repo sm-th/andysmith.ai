@@ -13,9 +13,14 @@ body { max-width: 58rem; line-height: 1.65; }
 }
 .masthead__title { font-size: 1.65rem; font-weight: 800; color: var(--text); text-decoration: none; line-height: 1.1; }
 .masthead__bio { color: var(--text-muted); margin: 0.35rem 0 0; font-size: 0.95rem; }
-.masthead__nav { display: flex; align-items: center; gap: 1rem; white-space: nowrap; }
+.masthead__nav { display: flex; align-items: center; gap: 0.9rem; white-space: nowrap; }
 .masthead__nav a { color: var(--text-muted); text-decoration: none; }
 .masthead__nav a:hover { color: var(--links); }
+.search { margin: 0; }
+.search input {
+  margin: 0; width: 10.5rem; max-width: 42vw;
+  font-size: 0.85rem; padding: 0.25rem 0.55rem;
+}
 
 /* ---- masthead: minimal (posts, archives) ---- */
 .masthead--reading {
@@ -99,6 +104,20 @@ h1, h2, h3 { line-height: 1.25; }
 .stream__note :is(h1, h2, h3, h4, h5, h6) { font-size: 1.02rem; font-weight: 600; margin: 1.3rem 0 0.3rem; }
 .stream__quote { font-size: 1.15rem; margin: 0 0 0.4rem; }
 .stream__cite { color: var(--text-muted); font-size: 0.9rem; }
+
+/* per-item permalink at the end of a feed entry */
+.stream__foot { margin-top: 0.8rem; font-size: 0.82rem; }
+.stream__foot a { color: var(--text-muted); text-decoration: none; }
+.stream__foot a:hover { color: var(--links); }
+
+/* home pagination */
+.pager {
+  display: flex; margin-top: 2.5rem; padding-top: 1.2rem;
+  border-top: 1px solid var(--border); font-size: 0.9rem;
+}
+.pager a { text-decoration: none; }
+.pager__earlier { margin-right: auto; }
+.pager__later { margin-left: auto; }
 
 /* ---- follow page ---- */
 .follow-links { list-style: none; padding: 0; }

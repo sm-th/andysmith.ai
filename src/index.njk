@@ -1,10 +1,14 @@
 ---
 layout: base.njk
-permalink: /
+pagination:
+  data: collections.postsByDay
+  size: 10
+  alias: days
+permalink: "{% if pagination.pageNumber == 0 %}/{% else %}/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 description: "Andy Smith — building scalable self-improving infra for AI agents."
 ---
 {% import "stream.njk" as stream %}
-{% for group in collections.postsByDay %}
+{% for group in days %}
 <section class="day">
   <h2 class="day__label"><a href="/{{ group.year }}/{{ group.mon }}/{{ group.day }}/">{{ group.posts[0].date | readableDate }}</a></h2>
   <ul class="stream stream--feed">
@@ -12,3 +16,9 @@ description: "Andy Smith — building scalable self-improving infra for AI agent
   </ul>
 </section>
 {% endfor %}
+{%- if pagination.href.next or pagination.href.previous %}
+<nav class="pager">
+  {%- if pagination.href.next %}<a class="pager__earlier" href="{{ pagination.href.next }}">&#8592; Earlier</a>{% endif -%}
+  {%- if pagination.href.previous %}<a class="pager__later" href="{{ pagination.href.previous }}">Later &#8594;</a>{% endif -%}
+</nav>
+{% endif -%}
