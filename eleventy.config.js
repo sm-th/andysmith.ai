@@ -1,4 +1,9 @@
 export default function (eleventyConfig) {
+  // Make bare URLs in post text clickable without rewriting the source (posts
+  // keep links exactly as written, e.g. a plain https://... stays plain text in
+  // Markdown but renders as a link).
+  eleventyConfig.amendLibrary("md", (md) => md.set({ linkify: true }));
+
   // Static assets
   eleventyConfig.addPassthroughCopy("src/assets");
   // GitHub Pages custom domain
