@@ -1,0 +1,8 @@
+---
+layout: base.njk
+---
+<article class="post post--quote">
+  {% if title %}<h1>{{ title }}</h1>{% endif %}
+  <blockquote>{{ content | safe }}</blockquote>
+  <p class="post__meta">— {% if source %}<a href="{{ source }}" rel="noopener">{{ attribution }}</a>{% else %}{{ attribution }}{% endif %} · <a href="{{ page.url }}">{{ page.date | readableDate }}</a></p>
+</article>

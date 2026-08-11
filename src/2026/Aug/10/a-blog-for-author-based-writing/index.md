@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title: A blog for author-based writing
 description: Why I decided to publish my raw thoughts on my own site, and the author-based vs reader-based split behind it.
 date: 2026-08-10T17:35:12

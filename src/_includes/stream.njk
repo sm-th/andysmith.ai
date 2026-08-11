@@ -1,0 +1,32 @@
+{#
+  Renders one item in a reverse-chronological stream (home page + archives).
+  Dispatches on `type` (default "post"). To add a content type: add a branch
+  here and a matching _includes/layouts/<type>.njk.
+#}
+{% macro item(post) %}
+{%- set t = post.data.type or "post" -%}
+{%- if t == "link" -%}
+  <li class="stream__item stream__item--link">
+    <div class="stream__head">
+      <a class="stream__title" href="{{ post.data.link }}" rel="noopener nofollow">{{ post.data.title }} &#8599;</a>
+      <a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>
+    </div>
+    <div class="stream__note">{{ post.templateContent | safe }}</div>
+  </li>
+{%- elif t == "quote" -%}
+  <li class="stream__item stream__item--quote">
+    <blockquote class="stream__quote">{{ post.templateContent | safe }}</blockquote>
+    <div class="stream__head">
+      <span class="stream__title">&#8212; {{ post.data.attribution }}</span>
+      <a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>
+    </div>
+  </li>
+{%- else -%}
+  <li class="stream__item">
+    <div class="stream__head">
+      <a class="stream__title" href="{{ post.url }}">{{ post.data.title }}</a>
+      <a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>
+    </div>
+  </li>
+{%- endif -%}
+{% endmacro %}

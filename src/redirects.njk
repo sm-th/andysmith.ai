@@ -1,0 +1,17 @@
+---
+permalink: /_redirects
+eleventyExcludeFromCollections: true
+---
+{#-
+  Cloudflare Workers/Pages redirects. The legacy URLs are fully derivable from
+  each post's date + slug, so old links keep working after the move to
+  /YYYY/Mon/DD/slug/ — no per-post frontmatter needed.
+    old scheme 1:  /blog/YYYY/MM/slug/   (previous Eleventy build)
+    old scheme 2:  /YYYY/MM/slug/        (original bare-HTML site)
+-#}
+{%- for post in collections.posts -%}
+{%- set y = post.date | dateYear -%}
+{%- set m = post.date | dateMonthNum -%}
+/blog/{{ y }}/{{ m }}/{{ post.fileSlug }}/ {{ post.url }} 301
+/{{ y }}/{{ m }}/{{ post.fileSlug }}/ {{ post.url }} 301
+{% endfor -%}

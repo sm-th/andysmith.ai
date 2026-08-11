@@ -1,47 +1,90 @@
-/* A little polish on top of water.css — nothing structural. */
+/* A little polish on top of water.css — stylish, but still minimal. */
 
 /* water.css is 800px wide; a slightly narrower column reads better */
 body {
-  max-width: 44rem;
+  max-width: 42rem;
   line-height: 1.65;
 }
 
-/* the post byline ("Andy Smith · date") is metadata — let it sit quieter */
-article > p:first-of-type {
+/* ---- headings: quieter, tighter ---- */
+h1, h2, h3 { line-height: 1.25; }
+.post h1 { margin-bottom: 0.15rem; }
+
+/* the post byline is metadata — let it sit quiet */
+.post__meta {
   color: var(--text-muted);
   font-size: 0.9rem;
-  margin-top: -0.3rem;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
 }
-article > p:first-of-type a {
-  color: var(--text-muted);
-}
+.post__meta a { color: var(--text-muted); text-decoration: none; }
+.post__meta a:hover { color: var(--links); text-decoration: underline; }
 
-/* home visiting card */
-.bio {
-  margin: 0.2rem 0 1rem;
-}
+.post--quote blockquote { font-size: 1.15rem; }
 
-/* year-archive post lists */
-.posts {
-  list-style: none;
-  padding-left: 0;
+/* ---- home header ---- */
+.home { margin-bottom: 2.5rem; }
+.bio { margin: 0.2rem 0 0.6rem; }
+.social { margin: 0 0 1rem; color: var(--text-muted); }
+.search input {
+  width: 100%;
+  max-width: 20rem;
   margin: 0;
 }
-.posts li {
+
+/* ---- reverse-chronological stream (home + archives) ---- */
+.stream-group { margin-bottom: 2rem; }
+.stream-group__year {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+.stream-group__year a { color: var(--text-muted); text-decoration: none; }
+.stream-group__year a:hover { color: var(--links); }
+
+.stream { list-style: none; padding-left: 0; margin: 0; }
+
+.stream__item { padding: 0.3rem 0; }
+.stream__head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  padding: 0.25rem 0;
 }
-.posts__date {
+.stream__title { text-decoration: none; }
+.stream__title:hover { text-decoration: underline; }
+.stream__date {
   flex: none;
   color: var(--text-muted);
   font-size: 0.85rem;
   white-space: nowrap;
+  text-decoration: none;
 }
+.stream__date:hover { color: var(--links); }
 
-/* footer nav — only on the home page */
+/* linkblog + quote items carry a body — offset them a touch */
+.stream__item--link, .stream__item--quote {
+  padding: 0.7rem 0;
+  border-left: 2px solid var(--border);
+  padding-left: 0.9rem;
+  margin: 0.4rem 0;
+}
+.stream__note { color: var(--text); font-size: 0.95rem; }
+.stream__note p { margin: 0.35rem 0 0; }
+.stream__quote { margin: 0 0 0.3rem; font-size: 1rem; }
+
+/* ---- breadcrumbs on archive pages ---- */
+.crumbs {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+.crumbs a { color: var(--text-muted); }
+
+/* ---- footer nav ---- */
 .site-footer {
   margin-top: 3rem;
   padding-top: 1.25rem;

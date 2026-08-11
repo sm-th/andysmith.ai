@@ -1,0 +1,8 @@
+---
+layout: base.njk
+---
+<article class="post post--link">
+  <h1><a href="{{ link }}" rel="noopener nofollow">{{ title }}</a></h1>
+  <p class="post__meta"><a href="/">{{ site.author }}</a> · <a href="{{ page.url }}">{{ page.date | readableDate }}</a> · <a href="{{ link }}" rel="noopener nofollow">{{ link | hostname }}</a></p>
+  {{ content | safe }}
+</article>

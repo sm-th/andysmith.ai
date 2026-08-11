@@ -3,6 +3,18 @@ layout: base.njk
 permalink: /
 description: "Andy Smith — building scalable self-improving infra for AI agents."
 ---
-<h1>{{ site.title }}</h1>
-<p class="bio">Build scalable self-improving infra for AI Agents.</p>
-<p class="social"><a href="https://x.com/andysmith_ai">x</a> · <a href="https://github.com/andysmith-ai">github</a></p>
+{% import "stream.njk" as stream %}
+<header class="home">
+  <h1>{{ site.title }}</h1>
+  <p class="bio">Building scalable self-improving infra for AI agents.</p>
+  <p class="social"><a href="https://x.com/andysmith_ai">x</a> · <a href="https://github.com/andysmith-ai">github</a></p>
+</header>
+
+{% for group in collections.postsByYear %}
+<section class="stream-group">
+  <h2 class="stream-group__year"><a href="/{{ group.year }}/">{{ group.year }}</a></h2>
+  <ul class="stream">
+    {%- for post in group.posts %}{{ stream.item(post) }}{% endfor -%}
+  </ul>
+</section>
+{% endfor %}

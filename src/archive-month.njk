@@ -1,0 +1,16 @@
+---
+layout: base.njk
+pagination:
+  data: collections.postsByMonth
+  size: 1
+  alias: group
+permalink: "/{{ group.year }}/{{ group.mon }}/"
+eleventyComputed:
+  title: "{{ group.mon }} {{ group.year }}"
+---
+{% import "stream.njk" as stream %}
+<nav class="crumbs"><a href="/">home</a> · <a href="/{{ group.year }}/">{{ group.year }}</a></nav>
+<h1>{{ group.mon }} {{ group.year }}</h1>
+<ul class="stream">
+  {%- for post in group.posts %}{{ stream.item(post) }}{% endfor -%}
+</ul>
