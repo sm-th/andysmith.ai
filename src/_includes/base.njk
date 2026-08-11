@@ -23,7 +23,20 @@
   <link rel="stylesheet" href="/assets/custom.css">
 </head>
 <body>
-  {{ content | safe }}
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="site-name"><a href="/">{{ site.title }}</a></p>
+      <p class="bio">Building scalable self-improving infra for AI agents.</p>
+      <p class="social"><a href="https://x.com/andysmith_ai">x</a> · <a href="https://github.com/andysmith-ai">github</a> · <a href="/feed.xml">feed</a></p>
+      <nav class="side-archive">
+        <h2>Archive</h2>
+        <ul>
+        {%- for g in collections.postsByYear %}<li><a href="/{{ g.year }}/">{{ g.year }}</a></li>{% endfor -%}
+        </ul>
+      </nav>
+    </aside>
+    <main>{{ content | safe }}</main>
+  </div>
   {% include "nav.njk" %}
 </body>
 </html>

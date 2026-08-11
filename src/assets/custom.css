@@ -1,105 +1,90 @@
-/* A little polish on top of water.css — stylish, but still minimal. */
+/* Polish on top of water.css — stylish, still minimal.
+   Layout: a sticky identity/archive sidebar on the left, the feed on the right. */
 
-/* water.css is 800px wide; a slightly narrower column reads better */
-body {
-  max-width: 42rem;
-  line-height: 1.65;
+/* ---- layout ---- */
+body { max-width: 56rem; line-height: 1.65; }
+.layout {
+  display: grid;
+  grid-template-columns: 12.5rem minmax(0, 1fr);
+  gap: 2.75rem;
+}
+@media (max-width: 640px) {
+  .layout { display: block; }
+  .sidebar { margin-bottom: 2.5rem; }
 }
 
-/* ---- headings: quieter, tighter ---- */
+/* ---- sidebar ---- */
+.sidebar { font-size: 0.9rem; }
+@media (min-width: 641px) {
+  .sidebar { position: sticky; top: 2rem; align-self: start; }
+}
+.site-name { font-size: 1.25rem; font-weight: 700; line-height: 1.2; margin: 0 0 0.2rem; }
+.site-name a { color: var(--text); text-decoration: none; }
+.sidebar .bio { color: var(--text-muted); margin: 0 0 0.6rem; }
+.sidebar .social { margin: 0 0 1.6rem; }
+.sidebar .social a { color: var(--text-muted); }
+.sidebar .social a:hover { color: var(--links); }
+.side-archive h2 {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-muted); margin: 0 0 0.4rem;
+}
+.side-archive ul { list-style: none; padding: 0; margin: 0; }
+.side-archive li { padding: 0.12rem 0; }
+
+/* ---- single post page ---- */
 h1, h2, h3 { line-height: 1.25; }
 .post h1 { margin-bottom: 0.15rem; }
-
-/* the post byline is metadata — let it sit quiet */
-.post__meta {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  margin-top: 0;
-  margin-bottom: 1.6rem;
-}
+.post__meta { color: var(--text-muted); font-size: 0.9rem; margin: 0 0 1.6rem; }
 .post__meta a { color: var(--text-muted); text-decoration: none; }
 .post__meta a:hover { color: var(--links); text-decoration: underline; }
-
 .post--quote blockquote { font-size: 1.15rem; }
 
-/* ---- home header ---- */
-.home { margin-bottom: 2.5rem; }
-.bio { margin: 0.2rem 0 0.6rem; }
-.social { margin: 0 0 1rem; color: var(--text-muted); }
-.search input {
-  width: 100%;
-  max-width: 20rem;
-  margin: 0;
-}
-
-/* ---- reverse-chronological stream (home + archives) ---- */
-.stream-group { margin-bottom: 2rem; }
-.stream-group__year {
-  font-size: 1rem;
-  letter-spacing: 0.02em;
-  color: var(--text-muted);
+/* ---- home feed: day-grouped ---- */
+.day__label {
+  font-size: 0.9rem; font-weight: 600; color: var(--text-muted);
+  margin: 2.6rem 0 0.2rem; padding-bottom: 0.3rem;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 0.3rem;
-  margin-bottom: 0.6rem;
 }
-.stream-group__year a { color: var(--text-muted); text-decoration: none; }
-.stream-group__year a:hover { color: var(--links); }
+.day:first-child .day__label { margin-top: 0; }
+.day__label a { color: var(--text-muted); text-decoration: none; }
+.day__label a:hover { color: var(--links); }
 
+/* ---- stream (reading feed + compact archive list) ---- */
 .stream { list-style: none; padding-left: 0; margin: 0; }
-
-.stream__item { padding: 0.35rem 0; }             /* compact index (archives) */
-.stream__head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-}
-/* compact list: title sits inline at body size */
+.stream__item { padding: 0.35rem 0; }
+.stream__head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .stream__title { margin: 0; font-size: 1rem; font-weight: 600; line-height: 1.3; }
 .stream__title a { text-decoration: none; }
 .stream__title a:hover { text-decoration: underline; }
 .stream__date {
-  flex: none;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  white-space: nowrap;
-  text-decoration: none;
+  flex: none; color: var(--text-muted); font-size: 0.85rem;
+  white-space: nowrap; text-decoration: none;
 }
 .stream__date:hover { color: var(--links); }
 
-/* feed mode (home): each entry announces itself with a real title, then body */
-.stream--feed .stream__item { padding: 2rem 0; border-bottom: 1px solid var(--border); }
+/* feed mode: each entry announces itself, then shows its full body */
+.stream--feed .stream__item { padding: 1.6rem 0; border-bottom: 1px solid var(--border); }
 .stream--feed .stream__item:last-child { border-bottom: 0; }
-.stream--feed .stream__title { font-size: 1.45rem; line-height: 1.2; }
+.stream--feed .stream__title { font-size: 1.4rem; line-height: 1.2; }
 .stream--feed .stream__title a { color: var(--text); }        /* ink, like a post title */
 .stream--feed .stream__title a:hover { color: var(--links); }
-
 .stream__note > :first-child { margin-top: 0.75rem; }
 .stream__note > :last-child { margin-bottom: 0; }
 /* demote in-body headings so they never outweigh the entry's own title */
 .stream__note :is(h1, h2, h3, h4, h5, h6) {
-  font-size: 1.02rem;
-  font-weight: 600;
-  margin: 1.3rem 0 0.3rem;
+  font-size: 1.02rem; font-weight: 600; margin: 1.3rem 0 0.3rem;
 }
 .stream__quote { font-size: 1.15rem; margin: 0 0 0.4rem; }
 .stream__cite { color: var(--text-muted); font-size: 0.9rem; }
 
-/* ---- breadcrumbs on archive pages ---- */
-.crumbs {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 1.2rem;
-}
+/* ---- archive breadcrumbs ---- */
+.crumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; }
 .crumbs a { color: var(--text-muted); }
 
-/* ---- footer nav ---- */
+/* ---- footer ---- */
 .site-footer {
-  margin-top: 3rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--border);
+  font-size: 0.9rem; color: var(--text-muted);
 }
 .site-footer a { color: var(--text-muted); }
 .site-footer a:hover { color: var(--links); }

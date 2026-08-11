@@ -1,16 +1,17 @@
 {#
   Renders one item in a reverse-chronological stream. Dispatches on `type`
   (default "post"). `compact` = one-line index (archives); otherwise the full
-  reading feed (home): post/link show title + full body, quote shows inline.
+  reading feed (home). `showDate` = show the per-item date (off when a date
+  header already labels the group, e.g. the day-grouped home / day archive).
   To add a content type: add a branch here and a _includes/layouts/<type>.njk.
 #}
-{% macro item(post, compact=false) %}
+{% macro item(post, compact=false, showDate=true) %}
 {%- set t = post.data.type or "post" -%}
 {%- if t == "link" -%}
   <li class="stream__item stream__item--link">
     <div class="stream__head">
       <h2 class="stream__title"><a href="{{ post.data.link }}" rel="noopener nofollow">{{ post.data.title }} &#8599;</a></h2>
-      <a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>
+      {%- if showDate %}<a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>{% endif -%}
     </div>
     {%- if not compact %}<div class="stream__note">{{ post.templateContent | safe }}</div>{% endif -%}
   </li>
@@ -19,13 +20,13 @@
     {%- if compact -%}
     <div class="stream__head">
       <h2 class="stream__title"><a href="{{ post.url }}">&#8220;{{ post.data.title or post.data.attribution }}&#8221;</a></h2>
-      <a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>
+      {%- if showDate %}<a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>{% endif -%}
     </div>
     {%- else -%}
     <blockquote class="stream__quote">{{ post.templateContent | safe }}</blockquote>
     <div class="stream__head">
       <span class="stream__cite">&#8212; {{ post.data.attribution }}</span>
-      <a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>
+      {%- if showDate %}<a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>{% endif -%}
     </div>
     {%- endif -%}
   </li>
@@ -33,7 +34,7 @@
   <li class="stream__item">
     <div class="stream__head">
       <h2 class="stream__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-      <a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>
+      {%- if showDate %}<a class="stream__date" href="{{ post.url }}">{{ post.date | monthDay }}</a>{% endif -%}
     </div>
     {%- if not compact %}<div class="stream__note">{{ post.templateContent | safe }}</div>{% endif -%}
   </li>
