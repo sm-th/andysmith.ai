@@ -47,15 +47,17 @@ h1, h2, h3 { line-height: 1.25; }
 
 .stream { list-style: none; padding-left: 0; margin: 0; }
 
-.stream__item { padding: 0.3rem 0; }              /* compact index (archives) */
+.stream__item { padding: 0.35rem 0; }             /* compact index (archives) */
 .stream__head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
 }
-.stream__title { text-decoration: none; }
-.stream__title:hover { text-decoration: underline; }
+/* compact list: title sits inline at body size */
+.stream__title { margin: 0; font-size: 1rem; font-weight: 600; line-height: 1.3; }
+.stream__title a { text-decoration: none; }
+.stream__title a:hover { text-decoration: underline; }
 .stream__date {
   flex: none;
   color: var(--text-muted);
@@ -65,14 +67,23 @@ h1, h2, h3 { line-height: 1.25; }
 }
 .stream__date:hover { color: var(--links); }
 
-/* feed mode (home): a reading stream — inline content, hairline dividers */
-.stream--feed .stream__item { padding: 1.4rem 0; border-bottom: 1px solid var(--border); }
+/* feed mode (home): each entry announces itself with a real title, then body */
+.stream--feed .stream__item { padding: 2rem 0; border-bottom: 1px solid var(--border); }
 .stream--feed .stream__item:last-child { border-bottom: 0; }
-.stream__note { font-size: 0.97rem; }
-.stream__note > :first-child { margin-top: 0.45rem; }
+.stream--feed .stream__title { font-size: 1.45rem; line-height: 1.2; }
+.stream--feed .stream__title a { color: var(--text); }        /* ink, like a post title */
+.stream--feed .stream__title a:hover { color: var(--links); }
+
+.stream__note > :first-child { margin-top: 0.75rem; }
 .stream__note > :last-child { margin-bottom: 0; }
-.stream__more { display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; }
-.stream__quote { margin: 0.45rem 0 0.3rem; }
+/* demote in-body headings so they never outweigh the entry's own title */
+.stream__note :is(h1, h2, h3, h4, h5, h6) {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 1.3rem 0 0.3rem;
+}
+.stream__quote { font-size: 1.15rem; margin: 0 0 0.4rem; }
+.stream__cite { color: var(--text-muted); font-size: 0.9rem; }
 
 /* ---- breadcrumbs on archive pages ---- */
 .crumbs {
