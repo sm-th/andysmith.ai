@@ -8,10 +8,9 @@ body { max-width: 58rem; line-height: 1.65; }
 .masthead--index {
   display: flex; justify-content: space-between; align-items: baseline;
   flex-wrap: wrap; gap: 1rem;
-  padding-bottom: 1.2rem; margin-bottom: 2.2rem;
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.8rem;   /* separated by whitespace, no rule */
 }
-.masthead__title { font-size: 1.65rem; font-weight: 800; color: var(--text); text-decoration: none; line-height: 1.1; }
+.masthead__title { font-size: 1.65rem; font-weight: 800; color: var(--text-main); text-decoration: none; line-height: 1.1; }
 .masthead__bio { color: var(--text-muted); margin: 0.35rem 0 0; font-size: 0.95rem; }
 .masthead__nav { display: flex; align-items: center; gap: 0.9rem; white-space: nowrap; }
 .masthead__nav a { color: var(--text-muted); text-decoration: none; }
@@ -25,11 +24,10 @@ body { max-width: 58rem; line-height: 1.65; }
 /* ---- masthead: minimal (posts, archives) ---- */
 .masthead--reading {
   display: flex; justify-content: space-between; align-items: baseline;
-  padding-bottom: 0.8rem; margin-bottom: 1.9rem;
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.2rem;   /* separated by whitespace, no rule */
   font-size: 0.9rem;
 }
-.masthead__home { font-weight: 600; color: var(--text); text-decoration: none; }
+.masthead__home { font-weight: 600; color: var(--text-main); text-decoration: none; }
 .masthead__home:hover { color: var(--links); }
 
 /* the "Follow" call-to-action — a subtle pill */
@@ -37,8 +35,8 @@ body { max-width: 58rem; line-height: 1.65; }
   font-weight: 600; text-decoration: none;
   border: 1px solid var(--border); border-radius: 6px; padding: 0.15rem 0.65rem;
 }
-.masthead__nav .cta, .masthead--reading .cta { color: var(--text); }
-.cta:hover { border-color: var(--links); color: var(--links); }
+.masthead__nav .cta, .masthead--reading .cta { color: var(--links); }  /* accent */
+.cta:hover { border-color: var(--links); background: var(--links); color: var(--background-body); }
 
 /* ---- layout: content left, sidebar right ---- */
 .layout {
@@ -96,7 +94,7 @@ h1, h2, h3 { line-height: 1.25; }
 /* no per-entry rules — whitespace separates entries; only the day label draws a line */
 .stream--feed .stream__item { padding: 1.5rem 0 2rem; }
 .stream--feed .stream__title { font-size: 1.4rem; line-height: 1.2; }
-.stream--feed .stream__title a { color: var(--text); }
+.stream--feed .stream__title a { color: var(--text-main); }
 .stream--feed .stream__title a:hover { color: var(--links); }
 .stream__note > :first-child { margin-top: 0.75rem; }
 .stream__note > :last-child { margin-bottom: 0; }
