@@ -12,5 +12,5 @@ eleventyComputed:
 <nav class="crumbs"><a href="/">home</a></nav>
 <h1>{{ group.year }}</h1>
 <ul class="stream">
-  {%- for post in group.posts %}{{ stream.item(post) }}{% endfor -%}
+  {%- for post in group.posts %}{{ stream.item(post, true) }}{% endfor -%}
 </ul>

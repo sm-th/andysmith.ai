@@ -13,7 +13,7 @@ description: "Andy Smith — building scalable self-improving infra for AI agent
 {% for group in collections.postsByYear %}
 <section class="stream-group">
   <h2 class="stream-group__year"><a href="/{{ group.year }}/">{{ group.year }}</a></h2>
-  <ul class="stream">
+  <ul class="stream stream--feed">
     {%- for post in group.posts %}{{ stream.item(post) }}{% endfor -%}
   </ul>
 </section>

@@ -47,7 +47,7 @@ h1, h2, h3 { line-height: 1.25; }
 
 .stream { list-style: none; padding-left: 0; margin: 0; }
 
-.stream__item { padding: 0.3rem 0; }
+.stream__item { padding: 0.3rem 0; }              /* compact index (archives) */
 .stream__head {
   display: flex;
   justify-content: space-between;
@@ -65,16 +65,14 @@ h1, h2, h3 { line-height: 1.25; }
 }
 .stream__date:hover { color: var(--links); }
 
-/* linkblog + quote items carry a body — offset them a touch */
-.stream__item--link, .stream__item--quote {
-  padding: 0.7rem 0;
-  border-left: 2px solid var(--border);
-  padding-left: 0.9rem;
-  margin: 0.4rem 0;
-}
-.stream__note { color: var(--text); font-size: 0.95rem; }
-.stream__note p { margin: 0.35rem 0 0; }
-.stream__quote { margin: 0 0 0.3rem; font-size: 1rem; }
+/* feed mode (home): a reading stream — inline content, hairline dividers */
+.stream--feed .stream__item { padding: 1.4rem 0; border-bottom: 1px solid var(--border); }
+.stream--feed .stream__item:last-child { border-bottom: 0; }
+.stream__note { font-size: 0.97rem; }
+.stream__note > :first-child { margin-top: 0.45rem; }
+.stream__note > :last-child { margin-bottom: 0; }
+.stream__more { display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; }
+.stream__quote { margin: 0.45rem 0 0.3rem; }
 
 /* ---- breadcrumbs on archive pages ---- */
 .crumbs {
