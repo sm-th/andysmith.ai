@@ -1,0 +1,35 @@
+{#
+  Right sidebar. Content varies by page: post pages get Prev/Next + Recent;
+  every page gets the year Archive. Kept to navigation only (no duplication of
+  the header's identity/CTA).
+#}
+<aside class="sidebar">
+  {%- set current = collections.posts | getCollectionItem(page) -%}
+  {%- if current -%}
+  {%- set newer = collections.posts | getPreviousCollectionItem(page) -%}
+  {%- set older = collections.posts | getNextCollectionItem(page) -%}
+  {%- if newer or older -%}
+  <nav class="side-block">
+    <h2>More</h2>
+    <ul>
+      {%- if older %}<li><a href="{{ older.url }}">&#8592; {{ older.data.title or older.data.attribution }}</a></li>{% endif -%}
+      {%- if newer %}<li><a href="{{ newer.url }}">{{ newer.data.title or newer.data.attribution }} &#8594;</a></li>{% endif -%}
+    </ul>
+  </nav>
+  {%- endif -%}
+  <div class="side-block">
+    <h2>Recent</h2>
+    <ul>
+      {%- for p in collections.posts | limit(7) -%}
+      {%- if p.url != page.url %}<li><a href="{{ p.url }}">{{ p.data.title or p.data.attribution }}</a></li>{% endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endif -%}
+  <nav class="side-block">
+    <h2>Archive</h2>
+    <ul>
+    {%- for g in collections.postsByYear %}<li><a href="/{{ g.year }}/">{{ g.year }}</a></li>{% endfor -%}
+    </ul>
+  </nav>
+</aside>

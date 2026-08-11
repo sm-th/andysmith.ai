@@ -54,6 +54,9 @@ export default function (eleventyConfig) {
     }
   });
 
+  // First N items of an array (e.g. "Recent posts" in the sidebar)
+  eleventyConfig.addFilter("limit", (arr, n) => (arr || []).slice(0, n));
+
   // Blog-only site: strip dead internal cross-links (e.g. ../../cards/*.md)
   // that point to content types this site doesn't publish. Keep the link text.
   eleventyConfig.addTransform("stripDeadMdLinks", (content) =>

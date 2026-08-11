@@ -1,0 +1,23 @@
+{#
+  Two header modes. Home ("/") gets the rich "storefront" masthead; every other
+  page (posts, archives) gets the minimal reading bar. CTA is "Follow" → /follow/.
+  (When link/quote content types exist, add type tabs to the index masthead.)
+#}
+{%- set mode = "index" if page.url == "/" else "reading" -%}
+{%- if mode == "index" -%}
+<header class="masthead masthead--index">
+  <div class="masthead__brand">
+    <a href="/" class="masthead__title">{{ site.title }}</a>
+    <p class="masthead__bio">Building scalable self-improving infra for AI agents.</p>
+  </div>
+  <nav class="masthead__nav">
+    <a class="cta" href="/follow/">Follow</a>
+    <a href="/feed.xml">RSS</a>
+  </nav>
+</header>
+{%- else -%}
+<header class="masthead masthead--reading">
+  <a href="/" class="masthead__home">{{ site.title }}</a>
+  <a class="cta" href="/follow/">Follow</a>
+</header>
+{%- endif -%}

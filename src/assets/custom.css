@@ -1,35 +1,62 @@
 /* Polish on top of water.css — stylish, still minimal.
-   Layout: a sticky identity/archive sidebar on the left, the feed on the right. */
+   Two header modes (rich home / minimal reading) + content-left, sidebar-right. */
 
-/* ---- layout ---- */
-body { max-width: 56rem; line-height: 1.65; }
+/* ---- shell ---- */
+body { max-width: 58rem; line-height: 1.65; }
+
+/* ---- masthead: rich (home) ---- */
+.masthead--index {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 1rem;
+  padding-bottom: 1.2rem; margin-bottom: 2.2rem;
+  border-bottom: 1px solid var(--border);
+}
+.masthead__title { font-size: 1.65rem; font-weight: 800; color: var(--text); text-decoration: none; line-height: 1.1; }
+.masthead__bio { color: var(--text-muted); margin: 0.35rem 0 0; font-size: 0.95rem; }
+.masthead__nav { display: flex; align-items: center; gap: 1rem; white-space: nowrap; }
+.masthead__nav a { color: var(--text-muted); text-decoration: none; }
+.masthead__nav a:hover { color: var(--links); }
+
+/* ---- masthead: minimal (posts, archives) ---- */
+.masthead--reading {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: 0.8rem; margin-bottom: 1.9rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.masthead__home { font-weight: 600; color: var(--text); text-decoration: none; }
+.masthead__home:hover { color: var(--links); }
+
+/* the "Follow" call-to-action — a subtle pill */
+.cta {
+  font-weight: 600; text-decoration: none;
+  border: 1px solid var(--border); border-radius: 6px; padding: 0.15rem 0.65rem;
+}
+.masthead__nav .cta, .masthead--reading .cta { color: var(--text); }
+.cta:hover { border-color: var(--links); color: var(--links); }
+
+/* ---- layout: content left, sidebar right ---- */
 .layout {
   display: grid;
-  grid-template-columns: 12.5rem minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 13rem;
   gap: 2.75rem;
+  align-items: start;
 }
 @media (max-width: 640px) {
   .layout { display: block; }
-  .sidebar { margin-bottom: 2.5rem; }
+  .sidebar { margin-top: 2.75rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
 }
 
 /* ---- sidebar ---- */
-.sidebar { font-size: 0.9rem; }
-@media (min-width: 641px) {
-  .sidebar { position: sticky; top: 2rem; align-self: start; }
+.sidebar { font-size: 0.88rem; }
+@media (min-width: 641px) { .sidebar { position: sticky; top: 2rem; } }
+.side-block { margin-bottom: 1.7rem; }
+.side-block h2 {
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--text-muted); margin: 0 0 0.45rem;
 }
-.site-name { font-size: 1.25rem; font-weight: 700; line-height: 1.2; margin: 0 0 0.2rem; }
-.site-name a { color: var(--text); text-decoration: none; }
-.sidebar .bio { color: var(--text-muted); margin: 0 0 0.6rem; }
-.sidebar .social { margin: 0 0 1.6rem; }
-.sidebar .social a { color: var(--text-muted); }
-.sidebar .social a:hover { color: var(--links); }
-.side-archive h2 {
-  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
-  color: var(--text-muted); margin: 0 0 0.4rem;
-}
-.side-archive ul { list-style: none; padding: 0; margin: 0; }
-.side-archive li { padding: 0.12rem 0; }
+.side-block ul { list-style: none; padding: 0; margin: 0; }
+.side-block li { padding: 0.18rem 0; line-height: 1.35; }
 
 /* ---- single post page ---- */
 h1, h2, h3 { line-height: 1.25; }
@@ -62,20 +89,20 @@ h1, h2, h3 { line-height: 1.25; }
 }
 .stream__date:hover { color: var(--links); }
 
-/* feed mode: each entry announces itself, then shows its full body */
 .stream--feed .stream__item { padding: 1.6rem 0; border-bottom: 1px solid var(--border); }
 .stream--feed .stream__item:last-child { border-bottom: 0; }
 .stream--feed .stream__title { font-size: 1.4rem; line-height: 1.2; }
-.stream--feed .stream__title a { color: var(--text); }        /* ink, like a post title */
+.stream--feed .stream__title a { color: var(--text); }
 .stream--feed .stream__title a:hover { color: var(--links); }
 .stream__note > :first-child { margin-top: 0.75rem; }
 .stream__note > :last-child { margin-bottom: 0; }
-/* demote in-body headings so they never outweigh the entry's own title */
-.stream__note :is(h1, h2, h3, h4, h5, h6) {
-  font-size: 1.02rem; font-weight: 600; margin: 1.3rem 0 0.3rem;
-}
+.stream__note :is(h1, h2, h3, h4, h5, h6) { font-size: 1.02rem; font-weight: 600; margin: 1.3rem 0 0.3rem; }
 .stream__quote { font-size: 1.15rem; margin: 0 0 0.4rem; }
 .stream__cite { color: var(--text-muted); font-size: 0.9rem; }
+
+/* ---- follow page ---- */
+.follow-links { list-style: none; padding: 0; }
+.follow-links li { padding: 0.35rem 0; }
 
 /* ---- archive breadcrumbs ---- */
 .crumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; }
