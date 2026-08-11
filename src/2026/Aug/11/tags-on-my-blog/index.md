@@ -4,7 +4,6 @@ type: post
 tags: [tagging, blogging, automation, taxonomy]
 description: How I handle blog tags, and why I auto-generate them for each post from scratch.
 date: 2026-08-11T23:46:51+07:00
-timezone: Asia/Bangkok
 ---
 
 What to do about tags on a blog.

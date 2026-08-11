@@ -54,6 +54,28 @@ export default function (eleventyConfig) {
       .toLowerCase()
   );
 
+  // A post's DAY is its own fact (when the author posted), taken from the
+  // year-first URL/path (/YYYY/Mon/D/…) — the author's local day — so it needs no
+  // per-post timezone. The clock TIME, by contrast, is localized to each READER
+  // in the browser (assets/time.js), not baked into the post.
+  const MON_FULL = { Jan: "January", Feb: "February", Mar: "March", Apr: "April",
+    May: "May", Jun: "June", Jul: "July", Aug: "August", Sep: "September",
+    Oct: "October", Nov: "November", Dec: "December" };
+  const urlParts = (url) => {
+    const m = (url || "").match(/\/(\d{4})\/([A-Za-z]{3})\/(\d{1,2})\//);
+    return m ? { year: m[1], mon: m[2], day: Number(m[3]) } : null;
+  };
+  // "August 11, 2026" from the post URL
+  eleventyConfig.addFilter("urlDate", (url) => {
+    const p = urlParts(url);
+    return p ? `${MON_FULL[p.mon] || p.mon} ${p.day}, ${p.year}` : "";
+  });
+  // "Aug 11" from the post URL
+  eleventyConfig.addFilter("urlMonthDay", (url) => {
+    const p = urlParts(url);
+    return p ? `${p.mon} ${p.day}` : "";
+  });
+
   // Date parts for legacy-URL redirect generation
   eleventyConfig.addFilter("dateYear", (value) => asDate(value).getUTCFullYear());
   eleventyConfig.addFilter("dateMonthNum", (value) =>

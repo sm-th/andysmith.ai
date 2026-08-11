@@ -4,7 +4,6 @@ tags: [writing, blogging, ai-agents, automation]
 type: post
 description: Why I still write my own blog posts by hand even as I automate everything else around my work.
 date: 2026-08-11T16:06:56+07:00
-timezone: Asia/Bangkok
 ---
 
 In the age of AI, it's really tempting to automate blogging, build content factories, all of that.

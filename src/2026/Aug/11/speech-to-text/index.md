@@ -4,7 +4,6 @@ tags: [speech-to-text, local-first, open-source, handy]
 type: post
 description: My take on local speech-to-text tools, and why I settled on Handy.
 date: 2026-08-11T16:49:31+07:00
-timezone: Asia/Bangkok
 ---
 
 I figured I'd look into how speech-to-text is doing these days.
