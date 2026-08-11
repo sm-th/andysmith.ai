@@ -134,9 +134,7 @@ h1, h2, h3 { line-height: 1.25; }
 .post__tags a { color: var(--text-muted); text-decoration: none; }
 .post__tags a:hover { color: var(--links); text-decoration: underline; }
 
-/* feed entry — hashtag-style, trailing the permalink foot (inherits foot color) */
-.stream__tags a { margin-left: 0.4rem; }
-.stream__tags a::before { content: "#"; opacity: 0.55; }
+/* feed entry — tags only (no time/permalink), middot-separated, inherits foot color */
 
 /* sidebar Topics */
 .side-tags__count { color: var(--text-muted); font-size: 0.78rem; }
