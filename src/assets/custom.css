@@ -32,11 +32,10 @@ body { max-width: 58rem; line-height: 1.65; }
 
 /* the "Follow" call-to-action — a subtle pill */
 .cta {
-  font-weight: 600; text-decoration: none;
+  font-weight: 600; text-decoration: none; color: var(--links);  /* accent */
   border: 1px solid var(--border); border-radius: 6px; padding: 0.15rem 0.65rem;
 }
-.masthead__nav .cta, .masthead--reading .cta { color: var(--links); }  /* accent */
-.cta:hover { border-color: var(--links); background: var(--links); color: var(--background-body); }
+.cta:hover { border-color: var(--links); }
 
 /* ---- layout: content left, sidebar right ---- */
 .layout {
