@@ -1,5 +1,6 @@
 ---
 title: Better Written Than Lost
+tags: [writing, blogging, ai-writing, automation]
 date: 2026-01-14T07:03:00
 aliases: ["/2026/01/better-written-than-lost/"]
 ---

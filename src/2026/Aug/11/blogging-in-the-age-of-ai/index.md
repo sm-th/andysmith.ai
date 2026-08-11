@@ -1,5 +1,6 @@
 ---
 title: Blogging in the age of AI
+tags: [writing, blogging, ai-agents, automation]
 type: post
 description: Why I still write my own blog posts by hand even as I automate everything else around my work.
 date: 2026-08-11T09:06:56

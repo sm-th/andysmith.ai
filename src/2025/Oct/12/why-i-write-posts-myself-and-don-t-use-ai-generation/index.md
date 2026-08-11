@@ -1,5 +1,6 @@
 ---
 title: Why I write posts myself and don't use AI generation
+tags: [writing, ai-writing, blogging, learning]
 date: 2025-10-12T15:42:00
 aliases: ["/2025/10/why-i-write-posts-myself-and-don-t-use-ai-generation/"]
 ---

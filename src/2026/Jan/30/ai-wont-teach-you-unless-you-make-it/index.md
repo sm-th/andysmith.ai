@@ -1,5 +1,6 @@
 ---
 title: "AI Won't Teach You — Unless You Make It"
+tags: [ai-assisted-learning, ai-agent, automation, anthropic]
 description: "AI accelerates work where you're already an expert but may hinder you from becoming one. How to learn new skills when AI always wants to do everything for you."
 date: 2026-01-30T09:48:12
 featured_image: image.png

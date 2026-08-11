@@ -1,5 +1,6 @@
 ---
 title: Done Today Beats Perfect Never
+tags: [writing, publishing, automation, claude-code, obsidian]
 date: 2026-01-14T07:35:00
 featured_image: featured.png
 aliases: ["/2026/01/simplify-to-publish/"]

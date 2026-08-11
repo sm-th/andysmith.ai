@@ -1,5 +1,6 @@
 ---
 title: "Short Sessions Beat Long Ones in Claude Code"
+tags: [claude-code, context-management, ai-agents, developer-workflow]
 description: "Why keeping Claude Code sessions short and saving context to persistent storage is more efficient than running everything in one endless session."
 date: 2026-01-30T07:26:16
 featured_image: image.png

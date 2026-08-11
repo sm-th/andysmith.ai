@@ -1,5 +1,6 @@
 ---
 title: Why AI is the most important thing to invest in today
+tags: [ai-adoption, disruption, entrepreneurship, future-of-work]
 date: 2025-10-10T19:58:00
 featured_image: featured.png
 aliases: ["/2025/10/why-ai-is-the-most-important-thing-to-invest-in-today/"]
@@ -13,4 +14,4 @@ The world changed. AI is a fundamental shift. Everything changes. General practi
 
 How? I don't know. But I must know, because if I ignore this shift I'll lose everything. I feel like a horse cab driver watching cars get invented. But we are all horse cab drivers now. I need to study all day if I want to win (or not lose at least). I need to try something new every day. I need to understand how to use new tools in my business and use them. Every day I need to change something. I need to build new tools.
 
-So, it's very important to be in this race. And it's so exciting! I need to be ahead. 
+So, it's very important to be in this race. And it's so exciting! I need to be ahead.

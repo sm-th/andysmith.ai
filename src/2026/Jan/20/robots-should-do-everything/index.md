@@ -1,5 +1,6 @@
 ---
 title: Robots Should Do Everything
+tags: [ai-agent, automation, multi-agent-system, entrepreneurship]
 description: My entrepreneurial hypothesis for the coming year — building meta-factories that construct and maintain robot systems
 date: 2026-01-20T10:30:00
 featured_image: image.png

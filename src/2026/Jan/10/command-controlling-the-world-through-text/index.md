@@ -1,5 +1,6 @@
 ---
 title: "Command: Controlling the World Through Text"
+tags: [ai-agents, claude-code, automation, git]
 description: "What if your entire participation in life could be reduced to sending text commands, with a chain of AI agents executing changes to the world?"
 date: 2026-01-10T14:12:00
 featured_image: image.png

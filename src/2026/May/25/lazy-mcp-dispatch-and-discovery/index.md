@@ -1,5 +1,6 @@
 ---
 title: "Lazy MCP: Dispatch and Discovery"
+tags: [mcp, ai-agents, function-calling, context-engineering]
 description: "How to reduce token waste from large MCP tool catalogues using a two-tool dispatch pattern with lazy discovery via help and call."
 date: 2026-05-25
 ---

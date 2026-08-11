@@ -1,5 +1,6 @@
 ---
 title: My Digital Twin Starts with Claude Code
+tags: [claude-code, digital-twin, personal-knowledge-graph, quantified-self, automation]
 description: Building a personal knowledge graph by capturing and indexing every Claude Code session.
 date: 2026-01-15T16:23:11
 featured_image: featured.png

@@ -1,5 +1,6 @@
 ---
 title: The last human bastion is agency
+tags: [agency, decision-making, automation, willpower, entrepreneurship]
 date: 2025-10-18T11:14:00
 featured_image: image.jpeg
 aliases: ["/2025/10/the-last-human-bastion-is-agency/"]

@@ -1,5 +1,6 @@
 ---
 title: "No Way Back: Why Constraints Drive Better Workflows"
+tags: [claude-code, developer-workflow, ai-agents, remote-development, sandboxing]
 description: "How switching to pure Claude Code forced me to abandon old habits and embrace a new paradigm of working with AI agents."
 date: 2026-01-15T17:14:22
 featured_image: featured.png

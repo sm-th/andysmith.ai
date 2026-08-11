@@ -1,5 +1,6 @@
 ---
 title: A speech recognition tool
+tags: [speech-to-text, whisper, speaker-diarization, mlx]
 type: post
 description: I needed to transcribe a two-person call, couldn't find a ready-made tool, so I put one together and looked at the current speech recognition and diarization options along the way.
 date: 2026-08-11T13:36:05

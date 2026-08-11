@@ -1,5 +1,6 @@
 ---
 title: A blog for author-based writing
+tags: [writing, publishing, social-media, discourse]
 type: post
 description: Why I decided to publish my raw thoughts on my own site, and the author-based vs reader-based split behind it.
 date: 2026-08-10T17:35:12

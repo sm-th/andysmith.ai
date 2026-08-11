@@ -1,5 +1,6 @@
 ---
 title: "Botlord: The Human as Corporation"
+tags: [ai-agents, management, entrepreneurship, future-of-work]
 description: "With AI agents, the boundary between individual and company blurs. Time to learn management."
 date: 2026-01-27T13:36:15
 featured_image: image.png

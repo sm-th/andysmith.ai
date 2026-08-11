@@ -1,5 +1,6 @@
 ---
 title: "Capsules: Isolated Environments for AI Agents"
+tags: [ai-agents, sandboxing, nix, claude-code]
 description: "My evolution of working with AI tools and a new concept for safely running agents in isolated, reproducible environments."
 date: 2026-01-22T10:36:04
 featured_image: image.png

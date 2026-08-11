@@ -1,5 +1,6 @@
 ---
 title: Hello World
+tags: [writing, philosophy, ai-agents, digital-identity]
 date: 2025-10-09T17:09:00
 featured_image: featured.png
 aliases: ["/2025/10/hello-world/"]

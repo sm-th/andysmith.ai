@@ -1,5 +1,6 @@
 ---
 title: Product Over Technology
+tags: [product, entrepreneurship, engineering-mindset]
 description: Why engineers who spent years building elegant systems often miss the most important thing — actually selling them.
 date: 2026-01-27T10:43:54
 featured_image: image.png

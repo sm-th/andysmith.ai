@@ -1,5 +1,6 @@
 ---
 title: "Clawdbot, Capsules, and Self-Evolving Agents"
+tags: [ai-agents, clawdbot, capsules, product-strategy]
 description: "My impressions of Clawdbot and why I think AI assistants need a minimal core with self-development capabilities instead of feature accumulation."
 date: 2026-01-28T08:07:08
 featured_image: image.png

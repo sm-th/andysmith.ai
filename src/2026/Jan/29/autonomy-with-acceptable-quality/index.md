@@ -1,5 +1,6 @@
 ---
 title: "The Real Metric for Autonomous AI: Quality Without Hand-Holding"
+tags: [ai-agents, autonomy, agent-orchestration, claude-code]
 description: "Stop watching multiple monitors. The true measure of autonomous AI systems is how many tasks they complete without your intervention."
 date: 2026-01-29T15:49:45
 featured_image: image.png

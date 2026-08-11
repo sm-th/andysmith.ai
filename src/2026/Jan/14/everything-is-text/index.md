@@ -1,5 +1,6 @@
 ---
 title: Everything Is Text
+tags: [emacs, ai-agent, cursor, plain-text]
 date: 2026-01-14T07:57:00
 aliases: ["/2026/01/everything-is-text/"]
 featured_image: featured.png

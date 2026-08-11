@@ -1,5 +1,6 @@
 ---
 title: How Many Tokens Did You Spend on This Task?
+tags: [llm, tokens, observability, claude]
 description: A simple question to gauge whether someone actually tried to solve a problem with modern tools
 date: 2026-01-20T08:15:28
 featured_image: featured.png

@@ -1,5 +1,6 @@
 ---
 title: "From Solo Sessions to Agent Orchestras"
+tags: [claude-code, ai-agents, agent-orchestration, automation, compute-utilization]
 description: "A framework for vertical and horizontal scaling of AI systems through maximizing inference utilization"
 date: 2026-01-21T07:37:45
 featured_image: image.png

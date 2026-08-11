@@ -1,5 +1,6 @@
 ---
 title: Everything should be written
+tags: [note-taking, personal-knowledge-management, writing, blogging]
 date: 2025-10-13T14:49:00
 aliases: ["/2025/10/everything-should-be-written/"]
 ---
