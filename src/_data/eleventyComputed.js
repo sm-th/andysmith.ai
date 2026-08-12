@@ -8,11 +8,17 @@
 //
 // Non-post templates (home, archives, feed, redirects) don't match the guard,
 // so their own `layout`/permalink is left untouched.
+const isPostStem = (data) =>
+  /^\/\d{4}\//.test((data.page && data.page.filePathStem) || "");
+
 export default {
   layout: (data) => {
     if (data.layout) return data.layout; // explicit frontmatter wins
-    const stem = (data.page && data.page.filePathStem) || "";
-    if (/^\/\d{4}\//.test(stem)) return `layouts/${data.type || "post"}.njk`;
+    if (isPostStem(data)) return `layouts/${data.type || "post"}.njk`;
     return undefined;
   },
+  // A post is any template whose SOURCE sits under a year folder (src/YYYY/...).
+  // Computed here so it lives in the top-level cascade and reaches base.njk — a
+  // layout's own `isPost` front matter doesn't propagate to parent layouts.
+  isPost: (data) => isPostStem(data),
 };
