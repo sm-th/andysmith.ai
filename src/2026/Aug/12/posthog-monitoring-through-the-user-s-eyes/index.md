@@ -1,5 +1,5 @@
 ---
-title: PostHog: monitoring through the user's eyes
+title: "PostHog: monitoring through the user's eyes"
 type: post
 tags: [posthog, observability, monitoring, product-analytics]
 description: How PostHog turns observability around by building it around the customer instead of the system.
