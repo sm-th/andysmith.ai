@@ -9,7 +9,8 @@ eleventyExcludeFromCollections: true
     old scheme 1:  /blog/YYYY/MM/slug/   (previous Eleventy build)
     old scheme 2:  /YYYY/MM/slug/        (original bare-HTML site)
 -#}
-{%- for post in collections.posts -%}
+/follow/ /contacts/ 301
+{% for post in collections.posts -%}
 {%- set y = post.date | dateYear -%}
 {%- set m = post.date | dateMonthNum -%}
 /blog/{{ y }}/{{ m }}/{{ post.fileSlug }}/ {{ post.url }} 301

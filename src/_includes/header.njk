@@ -1,7 +1,7 @@
 {#
   Two header modes. Home ("/" and paginated "/page/N/") gets the rich
   "storefront" masthead with search; every other page (posts, archives) gets the
-  minimal reading bar. CTA is "Follow" → /follow/. Search redirects to an
+  minimal reading bar. CTA is "Contacts" → /contacts/. Search redirects to an
   external engine scoped to the site (no local search index).
 #}
 {%- set mode = "index" if (page.url == "/" or "/page/" in page.url) else "reading" -%}
@@ -15,7 +15,7 @@
     <form class="search" role="search" onsubmit="event.preventDefault();var q=this.q.value.trim();if(q){location.href='https://duckduckgo.com/?q=site%3Aandysmith.ai+'+encodeURIComponent(q);}">
       <input type="search" name="q" placeholder="Search…" aria-label="Search this site">
     </form>
-    <a class="cta" href="/follow/">Follow</a>
+    <a class="cta" href="/contacts/">Contacts</a>
   </nav>
 </header>
 {%- else -%}
