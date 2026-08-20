@@ -7,6 +7,8 @@ description: A note on how a paper's ideas overlap with my Zeno project, and why
 date: 2026-08-20T16:58:16+07:00
 ---
 
+![screenshot](https://media.andysmith.ai/original/1X/23613c3577f3afdab8fff700bde09905d1197787.jpeg)
+
 This paper uses math to explain concepts that are a lot like the ones I'm trying to build in Zeno.
 
 But the authors use TypeScript, and that saddles them with a whole pile of the exact problems they're trying to solve.
