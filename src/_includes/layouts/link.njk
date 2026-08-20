@@ -3,8 +3,9 @@ layout: base.njk
 isPost: true
 ---
 <article class="post post--link">
-  <h1><a href="{{ link }}" rel="noopener nofollow">{{ title }}</a></h1>
-  <p class="post__meta"><a href="/">{{ site.author }}</a> · <a href="{{ page.url }}">{{ page.url | urlDate }}</a> · <a href="{{ link }}" rel="noopener nofollow">{{ link | hostname }}</a></p>
+  <h1>{{ title }}</h1>
+  <p class="post__meta"><a href="/">{{ site.author }}</a> · <a href="{{ page.url }}">{{ page.url | urlDate }}</a></p>
+  <p class="post__link">&#8599; <a href="{{ link }}" rel="noopener nofollow">{{ link }}</a></p>
   {{ content | safe }}
   {% import "tags.njk" as taglist %}{{ taglist.list(tags) }}
 </article>
