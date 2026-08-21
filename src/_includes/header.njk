@@ -15,12 +15,12 @@
     <form class="search" role="search" onsubmit="event.preventDefault();var q=this.q.value.trim();if(q){location.href='https://duckduckgo.com/?q=site%3Aandysmith.ai+'+encodeURIComponent(q);}">
       <input type="search" name="q" placeholder="Search…" aria-label="Search this site">
     </form>
-    <a class="cta" href="/contacts/">Contacts</a>
+    <a class="cta" href="/contacts/">Follow me</a>
   </nav>
 </header>
 {%- else -%}
 <header class="masthead masthead--reading">
   <a href="/" class="masthead__home">{{ site.title }}</a>
-  <a class="cta" href="/follow/">Follow</a>
+  <a class="cta" href="/follow/">Follow me</a>
 </header>
 {%- endif -%}
