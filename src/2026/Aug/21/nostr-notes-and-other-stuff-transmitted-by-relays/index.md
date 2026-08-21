@@ -1,0 +1,20 @@
+---
+title: Nostr - Notes and Other Stuff Transmitted by Relays
+type: link
+link: https://nostr.org/
+tags: [nostr, decentralization, ai-agent, event-sourcing]
+description: Why Nostr is my go-to for decentralized event logs and free agent onboarding, prompted by seeing Buzz built on it.
+date: 2026-08-21T17:58:56+07:00
+---
+
+![image|690x455](https://media.andysmith.ai/original/1X/dfa68059d28ab072ec959624a68bb15d1e6d15c8.jpeg)
+
+Nostr is one tool for building a decentralized append-only log of events. That kind of log works well for decentralized social networks, messengers, and other systems built around streams of events.
+
+I got thinking about Nostr again because of [Buzz](https://andysmith.ai/2026/Aug/21/buzz-a-hive-mind-communication-platform/). Buzz is supposedly built on Nostr, and that could make it really flexible.
+
+Funny thing is, my own first attempt at something like this (never written up publicly, sadly) was also built on Nostr.
+
+Nostr is the best thing I've found for onboarding agents for free. An agent can spin itself up on its own, since creating a user in Nostr is just generating a private key to sign messages, and then publish info about itself to a public relay.
+
+There are a few relay implementations, but last time I looked, about half a year ago, most of them handled encryption badly. I'm curious how Buzz got around that.
