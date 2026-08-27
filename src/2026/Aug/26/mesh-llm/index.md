@@ -7,8 +7,6 @@ description: A tool that links several machines into one network and shards a bi
 date: 2026-08-26T22:30:47+07:00
 ---
 
-# Mesh LLM
-
 <a class="lightbox" href="https://media.andysmith.ai/original/1X/fb721e519e61ba4b4cfcec539400d09391088107.jpeg"><img src="https://media.andysmith.ai/optimized/1X/fb721e519e61ba4b4cfcec539400d09391088107_2_690x376.jpeg" alt="image" width="690" height="376" loading="lazy" decoding="async"></a>
 
 A tool that links several machines into one network and shards a big LLM's inference across multiple devices.
