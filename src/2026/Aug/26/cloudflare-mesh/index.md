@@ -7,7 +7,7 @@ description: Cloudflare Mesh could work as a Tailscale replacement, with the tra
 date: 2026-08-26T08:38:59+07:00
 ---
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/8093d7e200c31810007f07046317390c45b0d016.jpeg" target="_blank" rel="noopener"><img src="https://media.andysmith.ai/optimized/1X/8093d7e200c31810007f07046317390c45b0d016_2_690x376.jpeg" alt="image" width="690" height="376" loading="lazy" decoding="async" srcset="https://media.andysmith.ai/optimized/1X/8093d7e200c31810007f07046317390c45b0d016_2_690x376.jpeg, https://media.andysmith.ai/optimized/1X/8093d7e200c31810007f07046317390c45b0d016_2_1035x564.jpeg 1.5x, https://media.andysmith.ai/optimized/1X/8093d7e200c31810007f07046317390c45b0d016_2_1380x752.jpeg 2x"></a>
+<a class="lightbox" href="https://media.andysmith.ai/original/1X/8093d7e200c31810007f07046317390c45b0d016.jpeg"><img src="https://media.andysmith.ai/optimized/1X/8093d7e200c31810007f07046317390c45b0d016_2_690x376.jpeg" alt="image" width="690" height="376" loading="lazy" decoding="async" srcset="https://media.andysmith.ai/optimized/1X/8093d7e200c31810007f07046317390c45b0d016_2_690x376.jpeg, https://media.andysmith.ai/optimized/1X/8093d7e200c31810007f07046317390c45b0d016_2_1035x564.jpeg 1.5x, https://media.andysmith.ai/optimized/1X/8093d7e200c31810007f07046317390c45b0d016_2_1380x752.jpeg 2x"></a>
 
 Cloudflare Mesh could be a decent replacement for Tailscale.
 
