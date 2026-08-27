@@ -7,7 +7,7 @@ description: Why Nostr is my go-to for decentralized event logs and free agent o
 date: 2026-08-21T17:58:56+07:00
 ---
 
-![image|690x455](https://media.andysmith.ai/original/1X/dfa68059d28ab072ec959624a68bb15d1e6d15c8.jpeg)
+<a class="lightbox" href="https://media.andysmith.ai/original/1X/dfa68059d28ab072ec959624a68bb15d1e6d15c8.jpeg" target="_blank" rel="noopener"><img src="https://media.andysmith.ai/optimized/1X/dfa68059d28ab072ec959624a68bb15d1e6d15c8_2_690x455.jpeg" alt="image" width="690" height="455" loading="lazy" decoding="async" srcset="https://media.andysmith.ai/optimized/1X/dfa68059d28ab072ec959624a68bb15d1e6d15c8_2_690x455.jpeg, https://media.andysmith.ai/optimized/1X/dfa68059d28ab072ec959624a68bb15d1e6d15c8_2_1035x682.jpeg 1.5x, https://media.andysmith.ai/optimized/1X/dfa68059d28ab072ec959624a68bb15d1e6d15c8_2_1380x910.jpeg 2x"></a>
 
 Nostr is one tool for building a decentralized append-only log of events. That kind of log works well for decentralized social networks, messengers, and other systems built around streams of events.
 

@@ -9,7 +9,7 @@ date: 2026-08-26T18:11:50+07:00
 
 # Microsandbox, a computer for anything, anywhere
 
-![image|690x372](https://media.andysmith.ai/original/1X/ecbdbd67b67b01dbb70ef532252de21e61ca0262.jpeg)
+<a class="lightbox" href="https://media.andysmith.ai/original/1X/ecbdbd67b67b01dbb70ef532252de21e61ca0262.jpeg" target="_blank" rel="noopener"><img src="https://media.andysmith.ai/optimized/1X/ecbdbd67b67b01dbb70ef532252de21e61ca0262_2_690x372.jpeg" alt="image" width="690" height="372" loading="lazy" decoding="async" srcset="https://media.andysmith.ai/optimized/1X/ecbdbd67b67b01dbb70ef532252de21e61ca0262_2_690x372.jpeg, https://media.andysmith.ai/optimized/1X/ecbdbd67b67b01dbb70ef532252de21e61ca0262_2_1035x558.jpeg 1.5x, https://media.andysmith.ai/optimized/1X/ecbdbd67b67b01dbb70ef532252de21e61ca0262_2_1380x744.jpeg 2x"></a>
 
 Microsandbox lets you run OCI images in a microVM. It works on Windows, Linux, and Apple Silicon, and you don't need Docker.
 

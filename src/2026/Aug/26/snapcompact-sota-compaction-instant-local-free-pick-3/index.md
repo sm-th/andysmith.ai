@@ -9,7 +9,7 @@ date: 2026-08-26T18:20:16+07:00
 
 # Snapcompact: SoTA compaction, instant, local, free. Pick 3
 
-![image|690x374](https://media.andysmith.ai/original/1X/1ab56843b4230eab76029f8f0301d5f2fa2969a7.png)
+<a class="lightbox" href="https://media.andysmith.ai/original/1X/1ab56843b4230eab76029f8f0301d5f2fa2969a7.png" target="_blank" rel="noopener"><img src="https://media.andysmith.ai/optimized/1X/1ab56843b4230eab76029f8f0301d5f2fa2969a7_2_690x374.png" alt="image" width="690" height="374" loading="lazy" decoding="async" srcset="https://media.andysmith.ai/optimized/1X/1ab56843b4230eab76029f8f0301d5f2fa2969a7_2_690x374.png, https://media.andysmith.ai/optimized/1X/1ab56843b4230eab76029f8f0301d5f2fa2969a7_2_1035x561.png 1.5x, https://media.andysmith.ai/optimized/1X/1ab56843b4230eab76029f8f0301d5f2fa2969a7_2_1380x748.png 2x"></a>
 
 A clever way to get context into a model while spending fewer tokens on it.
 

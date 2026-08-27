@@ -9,7 +9,7 @@ date: 2026-08-26T22:30:47+07:00
 
 # Mesh LLM
 
-![image|690x376](https://media.andysmith.ai/original/1X/fb721e519e61ba4b4cfcec539400d09391088107.jpeg)
+<a class="lightbox" href="https://media.andysmith.ai/original/1X/fb721e519e61ba4b4cfcec539400d09391088107.jpeg" target="_blank" rel="noopener"><img src="https://media.andysmith.ai/optimized/1X/fb721e519e61ba4b4cfcec539400d09391088107_2_690x376.jpeg" alt="image" width="690" height="376" loading="lazy" decoding="async" srcset="https://media.andysmith.ai/optimized/1X/fb721e519e61ba4b4cfcec539400d09391088107_2_690x376.jpeg, https://media.andysmith.ai/optimized/1X/fb721e519e61ba4b4cfcec539400d09391088107_2_1035x564.jpeg 1.5x, https://media.andysmith.ai/optimized/1X/fb721e519e61ba4b4cfcec539400d09391088107_2_1380x752.jpeg 2x"></a>
 
 A tool that links several machines into one network and shards a big LLM's inference across multiple devices.
 

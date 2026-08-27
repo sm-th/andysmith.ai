@@ -7,7 +7,7 @@ description: A look at Crossplane, which uses the Kubernetes reconciliation loop
 date: 2026-08-21T14:35:39+07:00
 ---
 
-![image|690x366](https://media.andysmith.ai/original/1X/dfee53540d5d90714a44c37cf037a18c774998d9.png)
+<a class="lightbox" href="https://media.andysmith.ai/original/1X/dfee53540d5d90714a44c37cf037a18c774998d9.png" target="_blank" rel="noopener"><img src="https://media.andysmith.ai/optimized/1X/dfee53540d5d90714a44c37cf037a18c774998d9_2_690x366.png" alt="image" width="690" height="366" loading="lazy" decoding="async" srcset="https://media.andysmith.ai/optimized/1X/dfee53540d5d90714a44c37cf037a18c774998d9_2_690x366.png, https://media.andysmith.ai/optimized/1X/dfee53540d5d90714a44c37cf037a18c774998d9_2_1035x549.png 1.5x, https://media.andysmith.ai/optimized/1X/dfee53540d5d90714a44c37cf037a18c774998d9_2_1380x732.png 2x"></a>
 
 Interesting way to describe infrastructure, using the reconciliation loop from Kubernetes.
 
