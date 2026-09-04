@@ -7,7 +7,7 @@ description: A quick look at Manifest, an LLM gateway with HA, fallback, and obs
 date: 2026-08-21T14:21:07+07:00
 ---
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/6a162b12c1f2b74a8a35caf2c31d1137d6646c65.jpeg"><img src="https://media.andysmith.ai/optimized/1X/6a162b12c1f2b74a8a35caf2c31d1137d6646c65_2_690x407.jpeg" alt="image" width="690" height="407" loading="lazy" decoding="async"></a>
+<a class="lightbox" href="https://files.andysmith.ai/img/6a162b12c1f2b74a8a35caf2c31d1137d6646c65/the-open-source-llm-router-for-ai-agents-manifest.png"><img src="https://files.andysmith.ai/img/6a162b12c1f2b74a8a35caf2c31d1137d6646c65/the-open-source-llm-router-for-ai-agents-manifest.webp" alt="image" width="1280" height="756" loading="lazy" decoding="async"></a>
 
 It's an LLM gateway, but with HA, fallback, and observability.
 

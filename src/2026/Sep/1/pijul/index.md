@@ -7,7 +7,7 @@ description: A quick look at Pijul, a patch-based alternative to git that's acad
 date: 2026-09-01T14:10:19+07:00
 ---
 
-![image|690x369](https://media.andysmith.ai/original/1X/99aa2259f084409c4479c22ece58b02efcf2590c.png)
+<a class="lightbox" href="https://files.andysmith.ai/img/99aa2259f084409c4479c22ece58b02efcf2590c/pijul.png"><img src="https://files.andysmith.ai/img/99aa2259f084409c4479c22ece58b02efcf2590c/pijul.webp" alt="image" width="1280" height="685" loading="lazy" decoding="async"></a>
 
 It's a version control system, an alternative to git.
 

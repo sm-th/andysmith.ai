@@ -7,7 +7,7 @@ description: First impressions of OMP, a batteries-included coding agent harness
 date: 2026-08-21T14:48:51+07:00
 ---
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/ea6aa7ade4ea7b44d11d40763c436fb2d0668afd.jpeg"><img src="https://media.andysmith.ai/optimized/1X/ea6aa7ade4ea7b44d11d40763c436fb2d0668afd_2_690x443.jpeg" alt="image" width="690" height="443" loading="lazy" decoding="async"></a>
+<a class="lightbox" href="https://files.andysmith.ai/img/ea6aa7ade4ea7b44d11d40763c436fb2d0668afd/omp-a-coding-agent-with-the-ide-wired-in.png"><img src="https://files.andysmith.ai/img/ea6aa7ade4ea7b44d11d40763c436fb2d0668afd/omp-a-coding-agent-with-the-ide-wired-in.webp" alt="image" width="1280" height="823" loading="lazy" decoding="async"></a>
 
 I'm trying out OMP (oh-my-pi).
 

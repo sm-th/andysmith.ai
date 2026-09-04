@@ -7,7 +7,7 @@ description: A checklist and badge for open source best practices in your repos,
 date: 2026-08-21T14:45:43+07:00
 ---
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/e759541395626caab0da55433bc80b6d0820ff8c.jpeg"><img src="https://media.andysmith.ai/optimized/1X/e759541395626caab0da55433bc80b6d0820ff8c_2_690x376.jpeg" alt="image" width="690" height="376" loading="lazy" decoding="async"></a>
+<a class="lightbox" href="https://files.andysmith.ai/img/e759541395626caab0da55433bc80b6d0820ff8c/openssf-best-practices-badge-program.png"><img src="https://files.andysmith.ai/img/e759541395626caab0da55433bc80b6d0820ff8c/openssf-best-practices-badge-program.webp" alt="image" width="1280" height="699" loading="lazy" decoding="async"></a>
 
 A checklist and a badge for best practices in open source repos.
 

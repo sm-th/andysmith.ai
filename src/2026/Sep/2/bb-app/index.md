@@ -7,7 +7,7 @@ description: A quick note on a self-modifying harness and how it compares to wha
 date: 2026-09-02T19:17:00+07:00
 ---
 
-![image|690x403](https://media.andysmith.ai/original/1X/d495b9ce3b959ab9c46b281b4119973da3a694fe.png)
+<a class="lightbox" href="https://files.andysmith.ai/img/d495b9ce3b959ab9c46b281b4119973da3a694fe/bb-app.png"><img src="https://files.andysmith.ai/img/d495b9ce3b959ab9c46b281b4119973da3a694fe/bb-app.webp" alt="image" width="1280" height="748" loading="lazy" decoding="async"></a>
 
 A harness that supposedly can modify itself.
 

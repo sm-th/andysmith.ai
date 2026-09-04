@@ -7,7 +7,7 @@ description: Why I want to try the Hyprland tiling window manager and maybe move
 date: 2026-09-04T14:10:48+07:00
 ---
 
-![image|690x412](https://media.andysmith.ai/original/1X/ff22dd87681da546e07c0a584b070b169e2cd4c2.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/ff22dd87681da546e07c0a584b070b169e2cd4c2/hyprland.png"><img src="https://files.andysmith.ai/img/ff22dd87681da546e07c0a584b070b169e2cd4c2/hyprland.webp" alt="image" width="1280" height="765" loading="lazy" decoding="async"></a>
 
 A tiling window manager that ships with [Omarchy](https://andysmith.ai/2026/Sep/4/omarchy/).
 

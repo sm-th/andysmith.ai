@@ -7,13 +7,13 @@ description: A quick look at Omarchy, an agent-run Linux from the creator of Rub
 date: 2026-09-04T13:19:01+07:00
 ---
 
-![image|690x412](https://media.andysmith.ai/original/1X/7bbe57e463d7dad696099bfaa103f8ab226509f6.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/7bbe57e463d7dad696099bfaa103f8ab226509f6/omarchy-1.png"><img src="https://files.andysmith.ai/img/7bbe57e463d7dad696099bfaa103f8ab226509f6/omarchy-1.webp" alt="image" width="1280" height="765" loading="lazy" decoding="async"></a>
 
 Interesting project from the guy behind Ruby on Rails. A good-looking Linux. It's built for agents and run entirely by agents, which spooks me right off, given how agents love to go read your secrets. Not clear how they deal with that.
 
 People have been putting it on old Intel MacBook Pros, and from what they say, it runs faster than macOS.
 
-![IMG_9996|666x500](https://media.andysmith.ai/original/1X/1b421e976eddafc0b623ec8cb143a3ab820c7a68.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/1b421e976eddafc0b623ec8cb143a3ab820c7a68/omarchy-2.png"><img src="https://files.andysmith.ai/img/1b421e976eddafc0b623ec8cb143a3ab820c7a68/omarchy-2.webp" alt="IMG_9996" width="1280" height="960" loading="lazy" decoding="async"></a>
 
 I haven't tried it myself yet. I've got an old MacBook too, but it's not near me.
 

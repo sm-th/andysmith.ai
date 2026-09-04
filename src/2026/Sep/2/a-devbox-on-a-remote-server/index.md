@@ -12,7 +12,7 @@ So I keep the software on my work laptop to the bare minimum. Everything else ru
 
 One thing I do is a remote devbox. It's an auction server from Hetzner running Debian (or NixOS). On it I run `code tunnel` and sign in through GitHub.
 
-![image|690x429](https://media.andysmith.ai/original/1X/6127f9c14845dab360985ab67e683dfaf65bd210.png)
+<a class="lightbox" href="https://files.andysmith.ai/img/6127f9c14845dab360985ab67e683dfaf65bd210/a-devbox-on-a-remote-server.png"><img src="https://files.andysmith.ai/img/6127f9c14845dab360985ab67e683dfaf65bd210/a-devbox-on-a-remote-server.webp" alt="image" width="1280" height="797" loading="lazy" decoding="async"></a>
 
 Then I open the devbox through vscode.dev in the browser, or through my local VSCode, and work with the code as if it were sitting right here.
 

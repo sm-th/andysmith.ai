@@ -20,4 +20,4 @@ Now the cost of an incident is obvious. A broken payment button isn't a line in 
 
 You shouldn't treat PostHog as a replacement for your technical observability stack. Some internal events aren't directly tied to user actions, so PostHog is an awkward place to look at them. But alongside the technical stack? Absolutely.
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/c93236cdcf7e2816a3f99981ff92360db10085cb.png"><img src="https://media.andysmith.ai/optimized/1X/c93236cdcf7e2816a3f99981ff92360db10085cb_2_690x436.png" alt="image" width="690" height="436" loading="lazy" decoding="async"></a>
+<a class="lightbox" href="https://files.andysmith.ai/img/c93236cdcf7e2816a3f99981ff92360db10085cb/posthog-monitoring-through-the-user-s-eyes.png"><img src="https://files.andysmith.ai/img/c93236cdcf7e2816a3f99981ff92360db10085cb/posthog-monitoring-through-the-user-s-eyes.webp" alt="image" width="1280" height="810" loading="lazy" decoding="async"></a>

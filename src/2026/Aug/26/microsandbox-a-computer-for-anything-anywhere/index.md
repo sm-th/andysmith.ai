@@ -7,7 +7,7 @@ description: A quick look at Microsandbox, a tool for running OCI images in micr
 date: 2026-08-26T18:11:50+07:00
 ---
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/ecbdbd67b67b01dbb70ef532252de21e61ca0262.jpeg"><img src="https://media.andysmith.ai/optimized/1X/ecbdbd67b67b01dbb70ef532252de21e61ca0262_2_690x372.jpeg" alt="image" width="690" height="372" loading="lazy" decoding="async"></a>
+<a class="lightbox" href="https://files.andysmith.ai/img/ecbdbd67b67b01dbb70ef532252de21e61ca0262/microsandbox-a-computer-for-anything-anywhere.png"><img src="https://files.andysmith.ai/img/ecbdbd67b67b01dbb70ef532252de21e61ca0262/microsandbox-a-computer-for-anything-anywhere.webp" alt="image" width="1280" height="691" loading="lazy" decoding="async"></a>
 
 Microsandbox lets you run OCI images in a microVM. It works on Windows, Linux, and Apple Silicon, and you don't need Docker.
 

@@ -7,7 +7,7 @@ description: Cloudflare Mesh could work as a Tailscale replacement, with the tra
 date: 2026-08-26T08:38:59+07:00
 ---
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/8093d7e200c31810007f07046317390c45b0d016.jpeg"><img src="https://media.andysmith.ai/optimized/1X/8093d7e200c31810007f07046317390c45b0d016_2_690x376.jpeg" alt="image" width="690" height="376" loading="lazy" decoding="async"></a>
+<a class="lightbox" href="https://files.andysmith.ai/img/8093d7e200c31810007f07046317390c45b0d016/cloudflare-mesh.png"><img src="https://files.andysmith.ai/img/8093d7e200c31810007f07046317390c45b0d016/cloudflare-mesh.webp" alt="image" width="1280" height="699" loading="lazy" decoding="async"></a>
 
 Cloudflare Mesh could be a decent replacement for Tailscale.
 

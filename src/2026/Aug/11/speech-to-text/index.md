@@ -10,7 +10,7 @@ I figured I'd look into how speech-to-text is doing these days.
 
 Locally, I use [Handy](https://handy.computer) for input.
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/5ec3834eca31218749a99e2c31ba8119400dea92.jpeg"><img src="https://media.andysmith.ai/optimized/1X/5ec3834eca31218749a99e2c31ba8119400dea92_2_580x500.jpeg" alt="image" width="580" height="500" loading="lazy" decoding="async"></a>
+<a class="lightbox" href="https://files.andysmith.ai/img/5ec3834eca31218749a99e2c31ba8119400dea92/speech-to-text.png"><img src="https://files.andysmith.ai/img/5ec3834eca31218749a99e2c31ba8119400dea92/speech-to-text.webp" alt="image" width="1280" height="1102" loading="lazy" decoding="async"></a>
 
 I tried comparing a few tools, like [openwhispr](https://github.com/OpenWhispr/openwhispr) and [wisprflow](https://wisprflow.ai). Handy isn't the most feature-rich of the bunch, but the fact that it's free, open source, and runs locally wins me over.
 

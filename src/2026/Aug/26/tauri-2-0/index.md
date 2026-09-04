@@ -7,7 +7,7 @@ description: A quick look at Tauri, a lighter alternative to Electron for buildi
 date: 2026-08-26T19:22:01+07:00
 ---
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/457fe89902665784622c19b48488fe40d71e67ae.jpeg"><img src="https://media.andysmith.ai/optimized/1X/457fe89902665784622c19b48488fe40d71e67ae_2_690x372.jpeg" alt="image" width="690" height="372" loading="lazy" decoding="async"></a>
+<a class="lightbox" href="https://files.andysmith.ai/img/457fe89902665784622c19b48488fe40d71e67ae/tauri-2-0.png"><img src="https://files.andysmith.ai/img/457fe89902665784622c19b48488fe40d71e67ae/tauri-2-0.webp" alt="image" width="1280" height="691" loading="lazy" decoding="async"></a>
 
 Tauri is a tool for turning web apps into desktop (and mobile) apps. It's an alternative to Electron.
 

@@ -7,7 +7,7 @@ description: How I use bitnami/sealed-secrets to push sops secrets into Kubernet
 date: 2026-09-02T16:11:05+07:00
 ---
 
-![image|690x460](https://media.andysmith.ai/original/1X/2e4af316bbdbc28ecb65aeb4923e95e675da1695.png)
+<a class="lightbox" href="https://files.andysmith.ai/img/2e4af316bbdbc28ecb65aeb4923e95e675da1695/bitnami-sealed-secrets.png"><img src="https://files.andysmith.ai/img/2e4af316bbdbc28ecb65aeb4923e95e675da1695/bitnami-sealed-secrets.webp" alt="image" width="1280" height="854" loading="lazy" decoding="async"></a>
 
 I use bitnami/sealed-secrets to deploy secrets to Kubernetes from sops.
 

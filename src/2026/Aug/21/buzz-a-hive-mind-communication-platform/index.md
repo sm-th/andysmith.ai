@@ -7,7 +7,7 @@ description: A quick look at Jack Dorsey's Buzz, a messenger for people and agen
 date: 2026-08-21T17:55:22+07:00
 ---
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/f5cf53d3fbcd63c6242d74ec9846488286b68ee8.jpeg"><img src="https://media.andysmith.ai/optimized/1X/f5cf53d3fbcd63c6242d74ec9846488286b68ee8_2_605x500.jpeg" alt="image" width="605" height="500" loading="lazy" decoding="async"></a>
+<a class="lightbox" href="https://files.andysmith.ai/img/f5cf53d3fbcd63c6242d74ec9846488286b68ee8/buzz-a-hive-mind-communication-platform.png"><img src="https://files.andysmith.ai/img/f5cf53d3fbcd63c6242d74ec9846488286b68ee8/buzz-a-hive-mind-communication-platform.webp" alt="image" width="1280" height="1056" loading="lazy" decoding="async"></a>
 
 I've had my eye on this tool from Jack Dorsey for a while. Now I'm getting into it in more detail.
 

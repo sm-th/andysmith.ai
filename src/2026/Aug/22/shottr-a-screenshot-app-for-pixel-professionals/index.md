@@ -7,7 +7,7 @@ description: A handy screenshot tool I picked up for grabbing, annotating, and s
 date: 2026-08-22T16:45:05+07:00
 ---
 
-<a class="lightbox" href="https://media.andysmith.ai/original/1X/8987ea8e9debf724b9e57f11b41dd03f8c6100c9.jpeg"><img src="https://media.andysmith.ai/optimized/1X/8987ea8e9debf724b9e57f11b41dd03f8c6100c9_2_690x431.jpeg" alt="image" width="690" height="431" loading="lazy" decoding="async"></a>
+<a class="lightbox" href="https://files.andysmith.ai/img/8987ea8e9debf724b9e57f11b41dd03f8c6100c9/shottr-a-screenshot-app-for-pixel-professionals.png"><img src="https://files.andysmith.ai/img/8987ea8e9debf724b9e57f11b41dd03f8c6100c9/shottr-a-screenshot-app-for-pixel-professionals.webp" alt="image" width="1280" height="800" loading="lazy" decoding="async"></a>
 
 A handy tool for taking screenshots. You can grab them fast, annotate them, and save them straight to S3.
 

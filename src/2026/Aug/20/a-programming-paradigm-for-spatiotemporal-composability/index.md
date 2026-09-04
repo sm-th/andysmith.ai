@@ -7,7 +7,7 @@ description: A note on how a paper's ideas overlap with my Zeno project, and why
 date: 2026-08-20T16:58:16+07:00
 ---
 
-![screenshot](https://media.andysmith.ai/original/1X/23613c3577f3afdab8fff700bde09905d1197787.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/23613c3577f3afdab8fff700bde09905d1197787/a-programming-paradigm-for-spatiotemporal-composability.png"><img src="https://files.andysmith.ai/img/23613c3577f3afdab8fff700bde09905d1197787/a-programming-paradigm-for-spatiotemporal-composability.webp" alt="screenshot" width="1280" height="1033" loading="lazy" decoding="async"></a>
 
 This paper uses math to explain concepts that are a lot like the ones I'm trying to build in Zeno.
 
