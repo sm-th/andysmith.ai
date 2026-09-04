@@ -55,9 +55,9 @@
 </head>
 <body>
   {% include "header.njk" %}
-  <div class="layout">
+  <div class="layout{% if wide %} layout--wide{% endif %}">
     <main>{{ content | safe }}</main>
-    {% include "sidebar.njk" %}
+    {% if not wide %}{% include "sidebar.njk" %}{% endif %}
   </div>
   {% include "nav.njk" %}
   <script src="/assets/time.js" defer></script>

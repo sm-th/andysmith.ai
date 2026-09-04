@@ -44,6 +44,7 @@ body { max-width: 58rem; line-height: 1.65; }
   gap: 2.75rem;
   align-items: start;
 }
+.layout--wide { display: block; }
 @media (max-width: 640px) {
   .layout { display: block; }
   .sidebar { margin-top: 2.75rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
@@ -161,6 +162,7 @@ h1, h2, h3 { line-height: 1.25; }
   --cal-gap: 3px;
   --cal-radius: 2px;
   --cal-label: 1.9rem;
+  --cal-min: 12px;
   --cal-l0: #ebedf0;
   --cal-l1: #9be9a8;
   --cal-l2: #40c463;
@@ -178,23 +180,26 @@ h1, h2, h3 { line-height: 1.25; }
 }
 .cal-intro { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.4rem; }
 .cal-intro strong { color: var(--text-main); }
-/* The full year always fits the content width — weeks flex to fill, cells stay
-   square via aspect-ratio. No horizontal scroll (which would hide recent weeks). */
+/* Cells stay a readable size (never shrink below --cal-min) and squares via
+   aspect-ratio. Where the full year fits (desktop) weeks grow to fill the
+   column; where it doesn't (narrow phones) weeks keep their size, pack to the
+   right, and the oldest (leftmost) weeks are clipped — recent stays visible at
+   full size, no horizontal scroll and no shrinking-to-dots. */
 .cal__scroll { min-width: 0; }
 .cal__months {
-  display: flex; gap: var(--cal-gap);
+  display: flex; gap: var(--cal-gap); justify-content: flex-end; overflow: hidden;
   margin-left: calc(var(--cal-label) + var(--cal-gap));
   font-size: 0.72rem; color: var(--text-muted); height: 1rem;
 }
-.cal__month { flex: 1 1 0; min-width: 0; white-space: nowrap; overflow: visible; }
+.cal__month { flex: 1 0 var(--cal-min); min-width: var(--cal-min); white-space: nowrap; }
 .cal__body { display: flex; gap: var(--cal-gap); align-items: stretch; }
 .cal__weekdays {
   flex: 0 0 var(--cal-label); display: flex; flex-direction: column;
   gap: var(--cal-gap); font-size: 0.7rem; color: var(--text-muted);
 }
 .cal__weekdays span { flex: 1 1 0; display: flex; align-items: center; }
-.cal__grid { flex: 1 1 0; min-width: 0; display: flex; gap: var(--cal-gap); }
-.cal__week { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: var(--cal-gap); }
+.cal__grid { flex: 1 1 0; min-width: 0; display: flex; gap: var(--cal-gap); justify-content: flex-end; overflow: hidden; }
+.cal__week { flex: 1 0 var(--cal-min); min-width: var(--cal-min); display: flex; flex-direction: column; gap: var(--cal-gap); }
 .cal__day {
   width: 100%; aspect-ratio: 1 / 1; border-radius: var(--cal-radius);
   background: var(--cal-l0); display: block; padding: 0;
