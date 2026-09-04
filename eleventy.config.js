@@ -175,6 +175,83 @@ export default function (eleventyConfig) {
       .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
   });
 
+  // GitHub-style contribution calendar for /progress/. Seven rows (weekday) by
+  // ~53 columns (week) covering the last year up to the build day. Each cell
+  // carries the local post count (brightness level) for that day; `byDay` maps
+  // each active ISO day to its posts (newest first) for the click-to-reveal
+  // panel. Days are the author's LOCAL day (same dayParts() the archives use),
+  // so the grid matches post URLs and never drifts to a UTC day.
+  eleventyConfig.addCollection("progress", (api) => {
+    const monIndex = Object.fromEntries(MONTHS.map((m, i) => [m, i]));
+    const pad = (n) => String(n).padStart(2, "0");
+    const posts = api.getFilteredByGlob(POST_GLOB).sort((a, b) => b.date - a.date);
+
+    // ISO day -> posts (newest first, since `posts` is sorted descending)
+    const byDay = new Map();
+    for (const post of posts) {
+      const p = dayParts(post);
+      const iso = `${p.year}-${pad(monIndex[p.mon] + 1)}-${pad(p.day)}`;
+      if (!byDay.has(iso)) byDay.set(iso, []);
+      byDay.get(iso).push({
+        title: post.data.title || post.data.attribution || "Untitled",
+        url: post.url,
+        type: post.data.type || "post",
+      });
+    }
+
+    const fmt = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+    const end = new Date();
+    end.setHours(12, 0, 0, 0);
+    const start = new Date(end);
+    start.setDate(start.getDate() - 364);
+    start.setDate(start.getDate() - start.getDay()); // rewind to the week's Sunday
+
+    let maxCount = 0;
+    let total = 0;
+    const weeks = [];
+    let lastMonth = null;
+    const cur = new Date(start);
+    while (cur <= end) {
+      const days = [];
+      for (let d = 0; d < 7; d++) {
+        const iso = fmt(cur);
+        const future = cur > end;
+        const list = future ? [] : byDay.get(iso) || [];
+        const count = list.length;
+        if (count > maxCount) maxCount = count;
+        total += count;
+        const [y, m, day] = iso.split("-").map(Number);
+        days.push({
+          iso,
+          count,
+          future,
+          href: count ? `/${y}/${MONTHS[m - 1]}/${day}/` : null,
+        });
+        cur.setDate(cur.getDate() + 1);
+      }
+      const firstMonth = days[0].iso.slice(5, 7);
+      const month = firstMonth !== lastMonth ? MONTHS[Number(firstMonth) - 1] : "";
+      lastMonth = firstMonth;
+      weeks.push({ days, month });
+    }
+
+    // Drop the leading partial month's label when the next column already starts
+    // a new month, so the two labels don't collide (e.g. "AuSep").
+    if (weeks.length > 1 && weeks[0].month && weeks[1].month) weeks[0].month = "";
+
+    // Brightness bucket 1..4 relative to the busiest day (0 = no posts).
+    const level = (c) => {
+      if (c <= 0) return 0;
+      if (maxCount <= 1) return 4;
+      const q = c / maxCount;
+      return q > 0.75 ? 4 : q > 0.5 ? 3 : q > 0.25 ? 2 : 1;
+    };
+    for (const week of weeks)
+      for (const day of week.days) day.level = level(day.count);
+
+    return [{ weeks, maxCount, total, byDay: Object.fromEntries(byDay) }];
+  });
+
   return {
     dir: { input: "src", includes: "_includes", output: "_site" },
     // Don't run post markdown through the template engine — content is untrusted

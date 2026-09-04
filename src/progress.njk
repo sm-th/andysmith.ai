@@ -1,0 +1,52 @@
+---
+layout: base.njk
+permalink: /progress/
+title: Progress
+description: "A year of writing — posts per day as a contribution heatmap."
+---
+{%- set cal = collections.progress[0] -%}
+<nav class="crumbs"><a href="/">home</a></nav>
+<h1>Progress</h1>
+<p class="cal-intro"><strong>{{ cal.total }}</strong> post{{ "" if cal.total == 1 else "s" }} in the last year. Each square is a day — brighter means more posts. Click a day to see them.</p>
+
+<div class="cal" role="group" aria-label="Posts per day over the last year">
+  <div class="cal__scroll">
+    <div class="cal__months" aria-hidden="true">
+      {%- for week in cal.weeks %}<span class="cal__month">{{ week.month }}</span>{% endfor -%}
+    </div>
+    <div class="cal__body">
+      <div class="cal__weekdays" aria-hidden="true">
+        <span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span>
+      </div>
+      <div class="cal__grid">
+        {%- for week in cal.weeks %}
+        <div class="cal__week">
+          {%- for day in week.days -%}
+          {%- if day.future -%}
+          <span class="cal__day cal__day--future" data-level="0"></span>
+          {%- elif day.count -%}
+          <a class="cal__day" href="{{ day.href }}" data-date="{{ day.iso }}" data-level="{{ day.level }}" data-count="{{ day.count }}" aria-label="{{ day.iso }}: {{ day.count }} post{{ "" if day.count == 1 else "s" }}"></a>
+          {%- else -%}
+          <span class="cal__day" data-level="0" aria-label="{{ day.iso }}: no posts"></span>
+          {%- endif -%}
+          {%- endfor -%}
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  <div class="cal__legend" aria-hidden="true">
+    <span>Less</span>
+    <span class="cal__day" data-level="0"></span>
+    <span class="cal__day" data-level="1"></span>
+    <span class="cal__day" data-level="2"></span>
+    <span class="cal__day" data-level="3"></span>
+    <span class="cal__day" data-level="4"></span>
+    <span>More</span>
+  </div>
+</div>
+
+<div id="cal-detail" class="cal-detail" hidden></div>
+
+<script id="progress-data" type="application/json">{{ cal.byDay | dump | safe }}</script>
+<script src="/assets/progress.js" defer></script>
