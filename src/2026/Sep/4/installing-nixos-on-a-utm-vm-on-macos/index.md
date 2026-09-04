@@ -14,44 +14,44 @@ Downloaded the NixOS aarch64 image: https://channels.nixos.org/nixos-26.05/lates
 
 Installed and launched UTM. Create a New Virtual Machine.
 
-![image|690x412](https://media.andysmith.ai/original/1X/349f4825f94eaf1d41968526002a724c6c2e7ac1.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/349f4825f94eaf1d41968526002a724c6c2e7ac1/installing-nixos-on-a-utm-vm-on-macos-1.png"><img src="https://files.andysmith.ai/img/349f4825f94eaf1d41968526002a724c6c2e7ac1/installing-nixos-on-a-utm-vm-on-macos-1.webp" alt="image" width="1280" height="765" loading="lazy" decoding="async"></a>
 
 Virtualize.
 
-![image|448x500](https://media.andysmith.ai/original/1X/501ec6a9d0c4bc95a7d58b87f585b9d6608697a0.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/501ec6a9d0c4bc95a7d58b87f585b9d6608697a0/installing-nixos-on-a-utm-vm-on-macos-2.png"><img src="https://files.andysmith.ai/img/501ec6a9d0c4bc95a7d58b87f585b9d6608697a0/installing-nixos-on-a-utm-vm-on-macos-2.webp" alt="image" width="1124" height="1254" loading="lazy" decoding="async"></a>
 
 Linux.
 
-![image|448x500](https://media.andysmith.ai/original/1X/8593c8d142c1c3374e3f6f3141eb996d4d318b8e.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/8593c8d142c1c3374e3f6f3141eb996d4d318b8e/installing-nixos-on-a-utm-vm-on-macos-3.png"><img src="https://files.andysmith.ai/img/8593c8d142c1c3374e3f6f3141eb996d4d318b8e/installing-nixos-on-a-utm-vm-on-macos-3.webp" alt="image" width="1124" height="1254" loading="lazy" decoding="async"></a>
 
 Default settings.
 
-![image|448x500](https://media.andysmith.ai/original/1X/6e3ba2db5fda99da87585088855bb745d2574cf0.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/6e3ba2db5fda99da87585088855bb745d2574cf0/installing-nixos-on-a-utm-vm-on-macos-4.png"><img src="https://files.andysmith.ai/img/6e3ba2db5fda99da87585088855bb745d2574cf0/installing-nixos-on-a-utm-vm-on-macos-4.webp" alt="image" width="1124" height="1254" loading="lazy" decoding="async"></a>
 
 Pointed it at the ISO image and left the rest of the settings alone (I'll try QEMU for now, not Apple VZ. People say QEMU does better with graphics acceleration and glitches less on Linux guests):
 
-![image|448x500](https://media.andysmith.ai/original/1X/898f47a7c97f462d1d93a7a78f9fb67b23a7cb6c.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/898f47a7c97f462d1d93a7a78f9fb67b23a7cb6c/installing-nixos-on-a-utm-vm-on-macos-5.png"><img src="https://files.andysmith.ai/img/898f47a7c97f462d1d93a7a78f9fb67b23a7cb6c/installing-nixos-on-a-utm-vm-on-macos-5.webp" alt="image" width="1124" height="1254" loading="lazy" decoding="async"></a>
 
 32 GB of disk is plenty for a test NixOS guest. For a real one (if the tests go well) I'll go with 64:
 
-![image|448x500](https://media.andysmith.ai/original/1X/a2f057fab6fffcfaa60d9bf300634618ef3b4ead.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/a2f057fab6fffcfaa60d9bf300634618ef3b4ead/installing-nixos-on-a-utm-vm-on-macos-6.png"><img src="https://files.andysmith.ai/img/a2f057fab6fffcfaa60d9bf300634618ef3b4ead/installing-nixos-on-a-utm-vm-on-macos-6.webp" alt="image" width="1124" height="1254" loading="lazy" decoding="async"></a>
 
 I don't need sharing on a test VM. If I have to move something over I'll just do it over ssh.
 
-![image|448x500](https://media.andysmith.ai/original/1X/ed7300accb4e641379a2b3f08cac7be6da50728a.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/ed7300accb4e641379a2b3f08cac7be6da50728a/installing-nixos-on-a-utm-vm-on-macos-7.png"><img src="https://files.andysmith.ai/img/ed7300accb4e641379a2b3f08cac7be6da50728a/installing-nixos-on-a-utm-vm-on-macos-7.webp" alt="image" width="1124" height="1254" loading="lazy" decoding="async"></a>
 
 Review and confirm:
 
-![image|448x500](https://media.andysmith.ai/original/1X/cf19c99ba9fb91e9c4d8c42fd570095d3389273b.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/cf19c99ba9fb91e9c4d8c42fd570095d3389273b/installing-nixos-on-a-utm-vm-on-macos-8.png"><img src="https://files.andysmith.ai/img/cf19c99ba9fb91e9c4d8c42fd570095d3389273b/installing-nixos-on-a-utm-vm-on-macos-8.webp" alt="image" width="1124" height="1254" loading="lazy" decoding="async"></a>
 
 
 Start it:
 
-![image|690x467](https://media.andysmith.ai/original/1X/a17ed14a1345623b513cea94eeb105cd3ea23f79.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/a17ed14a1345623b513cea94eeb105cd3ea23f79/installing-nixos-on-a-utm-vm-on-macos-9.png"><img src="https://files.andysmith.ai/img/a17ed14a1345623b513cea94eeb105cd3ea23f79/installing-nixos-on-a-utm-vm-on-macos-9.webp" alt="image" width="1280" height="867" loading="lazy" decoding="async"></a>
 
 Pick the default option and you get a bare terminal:
 
-![image|690x471](https://media.andysmith.ai/original/1X/f8840fb2189f51097dff11aefc832f9db414433a.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/f8840fb2189f51097dff11aefc832f9db414433a/installing-nixos-on-a-utm-vm-on-macos-10.png"><img src="https://files.andysmith.ai/img/f8840fb2189f51097dff11aefc832f9db414433a/installing-nixos-on-a-utm-vm-on-macos-10.webp" alt="image" width="1280" height="875" loading="lazy" decoding="async"></a>
 
 The most useful thing is to check the IP and ssh into the VM from the host:
 
@@ -60,7 +60,7 @@ ip ad sh
 passwd
 ```
 
-![image|690x471](https://media.andysmith.ai/original/1X/20b569ee8862bd370497acf8b262f96b8da125bf.png)
+<a class="lightbox" href="https://files.andysmith.ai/img/20b569ee8862bd370497acf8b262f96b8da125bf/installing-nixos-on-a-utm-vm-on-macos-11.png"><img src="https://files.andysmith.ai/img/20b569ee8862bd370497acf8b262f96b8da125bf/installing-nixos-on-a-utm-vm-on-macos-11.webp" alt="image" width="1280" height="875" loading="lazy" decoding="async"></a>
 
 Ping from inside the VM won't work because of Apple's network restrictions, so don't let that scare you (at first I thought something had installed wrong).
 
@@ -202,7 +202,7 @@ sudo reboot
 
 Something booted up:
 
-![image|690x471](https://media.andysmith.ai/original/1X/55ec62eb379fa993457edf825d25065459f10a69.jpeg)
+<a class="lightbox" href="https://files.andysmith.ai/img/55ec62eb379fa993457edf825d25065459f10a69/installing-nixos-on-a-utm-vm-on-macos-12.png"><img src="https://files.andysmith.ai/img/55ec62eb379fa993457edf825d25065459f10a69/installing-nixos-on-a-utm-vm-on-macos-12.webp" alt="image" width="1280" height="875" loading="lazy" decoding="async"></a>
 
 But honestly, the graphics look close to unusable compared to a macOS guest. Maybe there's still something to tweak, but for now probably not.
 
